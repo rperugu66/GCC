@@ -1,29 +1,30 @@
 Login As screen:
 
-    Rectangle1 As rectangle:
+    rect_Header As rectangle:
         Fill: =RGBA(53, 109, 166, 1)
         Height: =56
         Width: =1366
         ZIndex: =1
 
-    Image2 As image:
+    img_Logo As image:
         Height: =56
         Image: ='Gloucestershire-County-Council-White-logo-1024x188'
         Width: =250
         X: =17
         ZIndex: =2
 
-    Label1 As label:
+    lbl_AppHeader As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
         Height: =56
-        Size: =20
+        Size: =26
         Text: ="GCC Adult Care Center"
         Width: =493
         X: =390
         ZIndex: =3
 
-    Rectangle2 As rectangle:
+    rect_LoginBackground As rectangle:
         Fill: =RGBA(128, 128, 128, 0.1)
         Height: =513
         Width: =476
@@ -31,7 +32,7 @@ Login As screen:
         Y: =149
         ZIndex: =4
 
-    Rectangle3 As rectangle:
+    rect_Login As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =450
         Width: =409
@@ -39,7 +40,7 @@ Login As screen:
         Y: =180
         ZIndex: =5
 
-    TextInput2 As text:
+    txt_Password As text:
         BorderColor: =Color.Black
         Default: =""
         RadiusBottomLeft: =0
@@ -51,7 +52,7 @@ Login As screen:
         Y: =410
         ZIndex: =7
 
-    Button1 As button:
+    btn_Submit As button:
         BorderThickness: =0
         Fill: =RGBA(246, 88, 16, 1)
         HoverFill: =RGBA(246, 88, 16, 1)
@@ -60,7 +61,7 @@ Login As screen:
                 varLoginUser,
                 LookUp(
                     'GCC Adult Care Roles',
-                    'User Name'.Email = User().Email && Password = TextInput2.Text
+                    'User Name'.Email = User().Email && Password = txt_Password.Text
                 )
             );
             If(
@@ -79,7 +80,7 @@ Login As screen:
         Y: =540
         ZIndex: =8
 
-    Label2 As label:
+    lbl_LoginHeader As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Bold
         Height: =43
@@ -90,7 +91,7 @@ Login As screen:
         Y: =193
         ZIndex: =9
 
-    Label3 As label:
+    lbl_UserName As label:
         FontWeight: =FontWeight.Semibold
         Height: =41
         Text: ="Username"
@@ -99,7 +100,7 @@ Login As screen:
         Y: =265
         ZIndex: =10
 
-    Label3_1 As label:
+    lbl_Password As label:
         FontWeight: =FontWeight.Semibold
         Height: =41
         Text: ="Password"
@@ -108,7 +109,7 @@ Login As screen:
         Y: =369
         ZIndex: =11
 
-    Label2_1 As label:
+    lbl_ForgotPassword As label:
         Align: =Align.Right
         Color: =RGBA(56, 96, 178, 1)
         FontWeight: =FontWeight.Bold

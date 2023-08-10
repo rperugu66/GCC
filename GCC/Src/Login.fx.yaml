@@ -120,7 +120,7 @@ Login As screen:
         Y: =466
         ZIndex: =12
 
-    TextInput2_1 As text:
+    text_UserName As text:
         BorderColor: =Color.Black
         Default: =User().FullName
         RadiusBottomLeft: =0

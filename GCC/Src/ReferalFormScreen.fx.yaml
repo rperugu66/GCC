@@ -186,7 +186,8 @@
                             Size: =14
                             Text: =""
                             Width: =190
-                            X: =1176
+                            X: =63
+                            Y: =12
                             ZIndex: =4
 
                         rct_ReferrerInformation As rectangle:
@@ -358,33 +359,6 @@
                             X: =137
                             Y: =DataCardKey3.Y
                             ZIndex: =4
-
-                    DataCard10 As typedDataCard.blankCard:
-                        BorderStyle: =BorderStyle.Solid
-                        DisplayMode: =DisplayMode.Edit
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =81
-                        Width: =Parent.Width
-                        X: =0
-                        Y: =6
-                        ZIndex: =1
-
-                        TextInput4 As text:
-                            BorderColor: =RGBA(246, 88, 16, 1)
-                            Color: =RGBA(255, 255, 255, 1)
-                            Default: ="Care Program Information"
-                            Fill: =RGBA(246, 88, 16, 1)
-                            FontWeight: =FontWeight.Bold
-                            Height: =31
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            Size: =15
-                            Width: =298
-                            X: =30
-                            Y: =24
-                            ZIndex: =1
 
                     Title_DataCard1 As typedDataCard.textualEditCard:
                         BorderStyle: =BorderStyle.Solid
@@ -976,9 +950,10 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "ReferralReason")
                         Required: =true
                         Update: =DataCardValue10.Text
+                        Visible: =varReferralform1.step3
                         Width: =Parent.Width/2
-                        X: =0
-                        Y: =7
+                        X: =1
+                        Y: =5
                         ZIndex: =2
 
                         DataCardKey10 As label:
@@ -1046,9 +1021,10 @@
                         Height: =50
                         Required: =true
                         Update: =DataCardValue11.SelectedDate
+                        Visible: =varReferralform1.step3
                         Width: =Parent.Width/2
-                        X: =1
-                        Y: =7
+                        X: =0
+                        Y: =6
                         ZIndex: =2
 
                         DataCardKey11 As label:
@@ -1114,9 +1090,10 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue12.SelectedDate
+                        Visible: =varReferralform1.step3
                         Width: =Parent.Width/2
-                        X: =0
-                        Y: =8
+                        X: =1
+                        Y: =6
                         ZIndex: =2
 
                         DataCardKey12 As label:
@@ -1181,9 +1158,10 @@
                         Height: =50
                         Required: =true
                         Update: =DataCardValue14.SelectedDate
+                        Visible: =varReferralform1.step3
                         Width: =Parent.Width/2
-                        X: =1
-                        Y: =8
+                        X: =0
+                        Y: =7
                         ZIndex: =2
 
                         DataCardKey14 As label:
@@ -1260,9 +1238,10 @@
                         Height: =50
                         Required: =true
                         Update: =DataCardValue15.Value
+                        Visible: =varReferralform1.step3
                         Width: =Parent.Width
                         X: =0
-                        Y: =9
+                        Y: =8
                         ZIndex: =2
 
                         DataCardKey15 As label:
@@ -1310,8 +1289,8 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =30
-                            Y: =15
+                            X: =61
+                            Y: =40
                             ZIndex: =4
 
                         Checkbox1 As checkbox:
@@ -1338,7 +1317,7 @@
                         Visible: =false
                         Width: =Parent.Width
                         X: =0
-                        Y: =10
+                        Y: =9
                         ZIndex: =2
 
                         DataCardKey13 As label:

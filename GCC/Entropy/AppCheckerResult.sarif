@@ -3630,6 +3630,90 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -3681,19 +3765,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Rectangle9_1.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.rect_NewformBackground.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Rectangle9_1.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.rect_NewformBackground.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Rectangle9_1"
+                "type": "dashBoardScreen.rect_NewformBackground"
               }
             }
           ],
@@ -3711,19 +3795,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Rectangle9_1.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.rect_NewformBackground.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Rectangle9_1.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.rect_NewformBackground.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Rectangle9_1"
+                "type": "dashBoardScreen.rect_NewformBackground"
               }
             }
           ],
@@ -3741,19 +3825,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Icon4_1.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.icn_ManualUploadCancel.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Icon4_1.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.icn_ManualUploadCancel.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Icon4_1"
+                "type": "dashBoardScreen.icn_ManualUploadCancel"
               }
             }
           ],
@@ -3771,19 +3855,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Icon4_1.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.icn_ManualUploadCancel.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Icon4_1.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.icn_ManualUploadCancel.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Icon4_1"
+                "type": "dashBoardScreen.icn_ManualUploadCancel"
               }
             }
           ],
@@ -3861,19 +3945,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Icon3_1.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.icn_NewformCancel.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Icon3_1.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.icn_NewformCancel.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Icon3_1"
+                "type": "dashBoardScreen.icn_NewformCancel"
               }
             }
           ],
@@ -3891,19 +3975,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Icon3_1.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.icn_NewformCancel.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Icon3_1.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.icn_NewformCancel.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Icon3_1"
+                "type": "dashBoardScreen.icn_NewformCancel"
               }
             }
           ],
@@ -4131,19 +4215,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Radio1_1.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.rdo_ManualOrDigital.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Radio1_1.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.rdo_ManualOrDigital.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Radio1_1"
+                "type": "dashBoardScreen.rdo_ManualOrDigital"
               }
             }
           ],
@@ -4221,19 +4305,79 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard8.TextInput1.AccessibleLabel"
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Medical Condition_DataCard2'.DataCardValue44.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard8.TextInput1.AccessibleLabel",
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Medical Condition_DataCard2'.DataCardValue44.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard8.TextInput1"
+                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Medical Condition_DataCard2'.DataCardValue44"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Plan Opted_DataCard2'.DataCardValue45.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Plan Opted_DataCard2'.DataCardValue45.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReferalFormScreen",
+                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Plan Opted_DataCard2'.DataCardValue45"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Centre Opted_DataCard2'.DataCardValue46.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Centre Opted_DataCard2'.DataCardValue46.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReferalFormScreen",
+                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Centre Opted_DataCard2'.DataCardValue46"
               }
             }
           ],
@@ -4401,36 +4545,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard9.TextInput3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard9.TextInput3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard9.TextInput3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Referrer Name_DataCard1'.DataCardValue6.AccessibleLabel"
                 }
               ],
@@ -4534,36 +4648,6 @@
                 "member": "AccessibleLabel",
                 "module": "ReferalFormScreen",
                 "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Referrer Relation to Client_DataCard1'.DataCardValue9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard10.TextInput4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard10.TextInput4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.DataCard10.TextInput4"
               }
             }
           ],
@@ -4803,96 +4887,6 @@
                 "member": "AccessibleLabel",
                 "module": "ReferalFormScreen",
                 "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.Signature_DataCard1.PenInput1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Medical Condition_DataCard2'.DataCardValue44.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Medical Condition_DataCard2'.DataCardValue44.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Medical Condition_DataCard2'.DataCardValue44"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Plan Opted_DataCard2'.DataCardValue45.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Plan Opted_DataCard2'.DataCardValue45.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Plan Opted_DataCard2'.DataCardValue45"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Centre Opted_DataCard2'.DataCardValue46.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Centre Opted_DataCard2'.DataCardValue46.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard5.Container2.Form3.'Care Centre Opted_DataCard2'.DataCardValue46"
               }
             }
           ],

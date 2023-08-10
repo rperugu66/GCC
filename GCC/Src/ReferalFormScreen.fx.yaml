@@ -1895,7 +1895,8 @@
                 ZIndex: =1
 
             Button2_1 As button:
-                Fill: =RGBA(246, 88, 16, 1)
+                Fill: =RGBA(53, 109, 166, 1)
+                Font: =Font.'Segoe UI'
                 HoverFill: =RGBA(246, 88, 16, 1)
                 OnSelect: |-
                     =Set(varForm1,false);
@@ -1927,13 +1928,14 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Submit"
                 X: =1084
                 Y: =28
                 ZIndex: =2
 
             Icon6_2 As icon.BackArrow:
-                Color: =RGBA(246, 88, 16, 1)
+                Color: =RGBA(53, 109, 166, 1)
                 Height: =40
                 Icon: =Icon.BackArrow
                 OnSelect: =Navigate(dashBoardScreen,ScreenTransition.Cover);

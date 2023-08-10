@@ -218,7 +218,7 @@ socialCareTeamdashBoard As screen:
         Text: ="       Case Id                  Name                             Service Opted                   Referral Date      Tentative Start Date   Status   History"
         Width: =1250
         X: =68
-        Y: =208
+        Y: =176
         ZIndex: =6
 
     Group1 As group:

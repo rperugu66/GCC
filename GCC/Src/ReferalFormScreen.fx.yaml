@@ -1,0 +1,2369 @@
+"ReferalFormScreen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: =Set(varForm1,true);Set(varForm2,false);Set(varNotifyUser,false);
+
+    ReferalFormCanvas As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =64
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Rectangle1_2 As rectangle:
+                Fill: =RGBA(53, 109, 166, 1)
+                Height: =56
+                Width: =1366
+                ZIndex: =1
+
+            Image2_4 As image:
+                Height: =56
+                Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+                Width: =250
+                X: =17
+                ZIndex: =2
+
+            Label1_2 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =56
+                Size: =20
+                Text: ="GCC Adult Care Center"
+                Width: =493
+                X: =390
+                ZIndex: =3
+
+            Image3_1 As image:
+                Height: =56
+                Image: =User().Image
+                ImagePosition: =ImagePosition.Fill
+                RadiusBottomLeft: =56
+                RadiusBottomRight: =56
+                RadiusTopLeft: =56
+                RadiusTopRight: =56
+                Width: =56
+                X: =1000
+                ZIndex: =4
+
+            Label5_1 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =56
+                Size: =16
+                Text: =User().FullName
+                Width: =299
+                X: =1067
+                ZIndex: =5
+
+        DataCard2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =68
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Rectangle7 As rectangle:
+                Fill: =RGBA(241, 91, 64, 1)
+                Height: =60
+                Width: =1205
+                X: =76
+                ZIndex: =1
+
+            Label10 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =20
+                Text: ="Referral Form"
+                Width: =419
+                X: =436
+                ZIndex: =2
+
+        DataCard3 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =532
+            Visible: =varForm1 
+            Width: =1366
+            X: =0
+            Y: =3
+            ZIndex: =3
+
+            Container1 As groupContainer.manualLayoutContainer:
+                Fill: =Color.Transparent
+                Height: =519
+                Width: =1200
+                X: =90
+                ZIndex: =1
+
+                frm_ReferalForm As form:
+                    DataSource: ='Referral form1'
+                    DefaultMode: =FormMode.New
+                    Fill: =Color.White
+                    Height: =515
+                    Item: =If(varManualUpload=true,varCurrentFormProcessorItem,varCurrentItem)
+                    NumberOfColumns: =2
+                    Width: =1200
+                    Y: =4
+                    ZIndex: =1
+
+                    DataCard8 As typedDataCard.blankCard:
+                        BorderColor: =
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =81
+                        Width: =606
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        TextInput1 As text:
+                            BorderColor: =RGBA(246, 88, 16, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Default: ="Client Information"
+                            Fill: =RGBA(246, 88, 16, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =31
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =15
+                            Width: =298
+                            X: =30
+                            Y: =24
+                            ZIndex: =1
+
+                    "'Client Email_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Email"
+                        Default: =ThisItem.'Client Email'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Email")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Email")
+                        Required: =true
+                        Update: =DataCardValue3.Text
+                        Width: =Parent.Width/2
+                        X: =1
+                        Y: =1
+                        ZIndex: =1
+
+                        DataCardKey3 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue3 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.Email,Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage3 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue3.Y + DataCardValue3.Height
+                            ZIndex: =3
+
+                        StarVisible3 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey3.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =137
+                            Y: =DataCardKey3.Y
+                            ZIndex: =4
+
+                    DataCard9 As typedDataCard.blankCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =81
+                        Width: =1212
+                        X: =0
+                        Y: =3
+                        ZIndex: =1
+
+                        TextInput3 As text:
+                            BorderColor: =RGBA(246, 88, 16, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Default: ="Referrer Information"
+                            Fill: =RGBA(246, 88, 16, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =31
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =15
+                            Width: =298
+                            X: =30
+                            Y: =24
+                            ZIndex: =1
+
+                    DataCard10 As typedDataCard.blankCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =81
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =6
+                        ZIndex: =1
+
+                        TextInput4 As text:
+                            BorderColor: =RGBA(246, 88, 16, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            Default: ="Care Program Information"
+                            Fill: =RGBA(246, 88, 16, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =31
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =15
+                            Width: =298
+                            X: =30
+                            Y: =24
+                            ZIndex: =1
+
+                    Title_DataCard1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Title"
+                        Default: =ThisItem.Title
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Title")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Title")
+                        Required: =true
+                        Update: =DataCardValue1.Text
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey1 As label:
+                            Color: =Color.Black
+                            FontWeight: =FontWeight.Bold
+                            Height: =33
+                            Text: ="Client Name"
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            ZIndex: =1
+
+                        DataCardValue1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.Name,Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =43
+                            ZIndex: =2
+
+                        ErrorMessage1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue1.Y + DataCardValue1.Height
+                            ZIndex: =3
+
+                        StarVisible1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey1.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =138
+                            Y: =DataCardKey1.Y
+                            ZIndex: =4
+
+                    "'Client Mobile Number_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Cli_MobileNumber"
+                        Default: =ThisItem.'Client Mobile Number'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Cli_MobileNumber")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Cli_MobileNumber")
+                        Required: =true
+                        Update: =DataCardValue2.Text
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey2 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            ZIndex: =1
+
+                        DataCardValue2 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Mobile Number',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =42
+                            ZIndex: =2
+
+                        ErrorMessage2 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue2.Y + DataCardValue2.Height
+                            ZIndex: =3
+
+                        StarVisible2 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey2.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =221
+                            Y: =DataCardKey2.Y
+                            ZIndex: =4
+
+                    "'Client DOB_DataCard1' As typedDataCard.dateEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="DOB"
+                        Default: =ThisItem.'Client DOB'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"DOB")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =DataCardValue4.SelectedDate
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey4 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue4 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            DefaultDate: =If(varManualUpload=true,varCurrentFormProcessorItem.'Date of Birth',Parent.Default)
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage4 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue4.Y + DataCardValue4.Height
+                            ZIndex: =3
+
+                        StarVisible4 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey4.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =127
+                            Y: =DataCardKey4.Y
+                            ZIndex: =4
+
+                    "'Client Gender_DataCard1' As typedDataCard.comboBoxEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Gender"
+                        Default: =ThisItem.'Client Gender'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Gender")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =DataCardValue5.Selected
+                        Width: =606
+                        X: =1
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey5 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue5 As combobox:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: |-
+                                =If(varManualUpload=true,{Value:varCurrentFormProcessorItem.Gender},Parent.Default)
+                            DefaultSelectedItems: =Parent.Default
+                            DisplayFields: =["Value"]
+                            DisplayMode: =Parent.DisplayMode
+                            IsSearchable: =false
+                            Items: =Choices([@'Referral form1'].'Client Gender')
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectMultiple: =false
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage5 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue5.Y + DataCardValue5.Height
+                            ZIndex: =3
+
+                        StarVisible5 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey5.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =151
+                            Y: =10
+                            ZIndex: =4
+
+                    "'Referrer Name_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Ref_Name"
+                        Default: =ThisItem.'Referrer Name'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_Name")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_Name")
+                        Required: =true
+                        Update: =DataCardValue6.Text
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =4
+                        ZIndex: =2
+
+                        DataCardKey6 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue6 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer Name',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage6 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue6.Y + DataCardValue6.Height
+                            ZIndex: =3
+
+                        StarVisible6 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey6.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =161
+                            Y: =10
+                            ZIndex: =4
+
+                    "'Referrer Mobile Number_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Ref_MobileNumber"
+                        Default: =
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_MobileNumber")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_MobileNumber")
+                        Required: =true
+                        Update: =DataCardValue7.Text
+                        Width: =Parent.Width/2
+                        X: =1
+                        Y: =4
+                        ZIndex: =2
+
+                        DataCardKey7 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue7 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer''s Mobile Number',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage7 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue7.Y + DataCardValue7.Height
+                            ZIndex: =3
+
+                        StarVisible7 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey7.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =241
+                            Y: =10
+                            ZIndex: =4
+
+                    "'Referrer Email Id_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Ref_EmailID"
+                        Default: =ThisItem.'Referrer Email Id'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_EmailID")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_EmailID")
+                        Required: =true
+                        Update: =DataCardValue8.Text
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =5
+                        ZIndex: =2
+
+                        DataCardKey8 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue8 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer''s Email',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage8 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue8.Y + DataCardValue8.Height
+                            ZIndex: =3
+
+                        StarVisible8 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey8.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =181
+                            Y: =DataCardKey8.Y
+                            ZIndex: =4
+
+                    "'Referrer Relation to Client_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Ref_RelationtoClient"
+                        Default: =ThisItem.'Referrer Relation to Client'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_RelationtoClient")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_RelationtoClient")
+                        Required: =true
+                        Update: =DataCardValue9.Text
+                        Width: =Parent.Width/2
+                        X: =1
+                        Y: =5
+                        ZIndex: =2
+
+                        DataCardKey9 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue9 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Relation to Client',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage9 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue9.Y + DataCardValue9.Height
+                            ZIndex: =3
+
+                        StarVisible9 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey9.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =260
+                            Y: =10
+                            ZIndex: =4
+
+                    "'Referral Reason_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="ReferralReason"
+                        Default: =ThisItem.'Referral Reason'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"ReferralReason")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "ReferralReason")
+                        Required: =true
+                        Update: =DataCardValue10.Text
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =7
+                        ZIndex: =2
+
+                        DataCardKey10 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue10 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referral Reason',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage10 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue10.Y + DataCardValue10.Height
+                            ZIndex: =3
+
+                        StarVisible10 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey10.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =170
+                            Y: =DataCardKey10.Y
+                            ZIndex: =4
+
+                    "'Start Date of Care Program_DataCard1' As typedDataCard.dateEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="StartDateofCareProgram"
+                        Default: =ThisItem.'Start Date of Care Program'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"StartDateofCareProgram")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =DataCardValue11.SelectedDate
+                        Width: =Parent.Width/2
+                        X: =1
+                        Y: =7
+                        ZIndex: =2
+
+                        DataCardKey11 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue11 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            DefaultDate: =If(varManualUpload=true,varCurrentFormProcessorItem.'Start date of care Program',Parent.Default)
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage11 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue11.Y + DataCardValue11.Height
+                            ZIndex: =3
+
+                        StarVisible11 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey11.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =265
+                            Y: =DataCardKey11.Y
+                            ZIndex: =4
+
+                    "'End Date of Care Program_DataCard1' As typedDataCard.dateEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="EndDateofCareProgram"
+                        Default: =ThisItem.'End Date of Care Program'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"EndDateofCareProgram")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =DataCardValue12.SelectedDate
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =8
+                        ZIndex: =2
+
+                        DataCardKey12 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue12 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            DefaultDate: =If(varManualUpload=true,varCurrentFormProcessorItem.'End date of care Program',Parent.Default)
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage12 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue12.Y + DataCardValue12.Height
+                            ZIndex: =3
+
+                        StarVisible12 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey12.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey12.Y
+                            ZIndex: =4
+
+                    "'Date of Referral_DataCard1' As typedDataCard.dateEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="DateofReferral"
+                        Default: =ThisItem.'Date of Referral'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"DateofReferral")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =DataCardValue14.SelectedDate
+                        Width: =Parent.Width/2
+                        X: =1
+                        Y: =8
+                        ZIndex: =2
+
+                        DataCardKey14 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue14 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            DefaultDate: =If(varManualUpload=true,varCurrentFormProcessorItem.'Date of Referral',Parent.Default)
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            IsEditable: =true
+                            OnChange: =
+                            OnSelect: |
+                                =If(
+                                    IsBlank(DataCardValue14.SelectedDate),
+                                    true, // Allow empty program start date
+                                    DateDiff(
+                                        DataCardValue14.SelectedDate,
+                                        DataCardValue11.SelectedDate,
+                                        TimeUnit.Days
+                                    ) <= 15
+                                )
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage14 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue14.Y + DataCardValue14.Height
+                            ZIndex: =3
+
+                        StarVisible14 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey14.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =174
+                            Y: =DataCardKey14.Y
+                            ZIndex: =4
+
+                    Consent_DataCard1 As typedDataCard.toggleEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Consent"
+                        Default: =ThisItem.Consent
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Consent")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =DataCardValue15.Value
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =9
+                        ZIndex: =2
+
+                        DataCardKey15 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Visible: =false
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue15 As toggleSwitch:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DisplayMode: =Parent.DisplayMode
+                            Tooltip: =Parent.DisplayName
+                            Visible: =false
+                            X: =30
+                            Y: =DataCardKey15.Y + DataCardKey15.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage15 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue15.Y + DataCardValue15.Height
+                            ZIndex: =3
+
+                        StarVisible15 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey15.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =30
+                            Y: =15
+                            ZIndex: =4
+
+                        Checkbox1 As checkbox:
+                            BorderColor: =Color.Black
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Consent & Signature',Parent.Default)
+                            Height: =37
+                            Text: ="I hereby give consent to Adult care programme to utilize my information"
+                            Width: =1083
+                            X: =40
+                            Y: =40
+                            ZIndex: =5
+
+                    Signature_DataCard1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="ConsentSignature"
+                        Default: =ThisItem.Signature
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"ConsentSignature")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =280
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "ConsentSignature")
+                        Required: =true
+                        Update: =DataCardValue13.Text
+                        Visible: =false
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =10
+                        ZIndex: =2
+
+                        DataCardKey13 As label:
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =47
+                            Text: =Parent.DisplayName
+                            Width: =300
+                            Wrap: =false
+                            X: =481
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue13 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Visible: =false
+                            Width: =535
+                            X: =30
+                            Y: =57
+                            ZIndex: =2
+
+                        ErrorMessage13 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue13.Y + DataCardValue13.Height
+                            ZIndex: =3
+
+                        StarVisible13 As label:
+                            Align: =Align.Center
+                            Height: =47
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =7
+                            Wrap: =false
+                            X: =719
+                            Y: =10
+                            ZIndex: =4
+
+                        PenInput1 As inkControl:
+                            Height: =186
+                            Width: =491
+                            X: =320
+                            Y: =61
+                            ZIndex: =5
+
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varForm1 && varLoginUser.Role="Duty Manager" && !varManualUpload&&!varSocialWorker
+            Width: =1366
+            X: =0
+            Y: =4
+            ZIndex: =4
+
+            Rectangle7_2 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1205
+                X: =86
+                Y: =10
+                ZIndex: =1
+
+            Button2 As button:
+                Fill: =RGBA(246, 88, 16, 1)
+                HoverFill: =RGBA(246, 88, 16, 1)
+                OnSelect: |-
+                    =Set(varForm1,false);Set(varForm2,true);EditForm(Form3);
+                    If(varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Visited"||varCurrentItem.Status="Intimated",ViewForm(Form3))
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Next"
+                X: =1083
+                Y: =17
+                ZIndex: =2
+
+            Icon6 As icon.BackArrow:
+                Color: =RGBA(246, 88, 16, 1)
+                Height: =40
+                Icon: =Icon.BackArrow
+                OnSelect: =Navigate(dashBoardScreen,ScreenTransition.Cover);
+                Width: =40
+                X: =110
+                Y: =17
+                ZIndex: =3
+
+        DataCard5 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =480
+            Visible: =varForm2 
+            Width: =1366
+            X: =0
+            Y: =2
+            ZIndex: =5
+
+            Container2 As groupContainer.manualLayoutContainer:
+                Height: =466
+                Width: =1210
+                X: =74
+                Y: =10
+                ZIndex: =1
+
+                Form3 As form:
+                    DataSource: ='Referral form1'
+                    DefaultMode: =If(varCurrentItem.Status="Open",FormMode.View,FormMode.Edit)
+                    Fill: |
+                        =Color.White
+                    Height: =466
+                    Item: =varCurrentItem
+                    NumberOfColumns: =2
+                    Width: =1208
+                    X: =2
+                    ZIndex: =1
+
+                    "'Medical Condition_DataCard2' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="MedicalCondition"
+                        Default: =ThisItem.'Medical Condition'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"MedicalCondition")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =331
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "MedicalCondition")
+                        Required: =true
+                        Update: =DataCardValue44.Text
+                        Width: =1208
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey44 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue44 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            Default: =If(varCurrentItem.Status="Open"||varCurrentItem.Status="Visited"||varCurrentItem.Status="Intimated",Parent.Default, Concat(TextRecognizer1.Results,Text))
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =229
+                            MaxLength: =Parent.MaxLength
+                            Mode: =TextMode.MultiLine
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width/2.2
+                            X: =30
+                            Y: =DataCardKey44.Y + DataCardKey44.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage44 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =40
+                            Y: =109
+                            ZIndex: =3
+
+                        StarVisible44 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey44.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey44.Y
+                            ZIndex: =4
+
+                        TextRecognizer1 As TextRecognizer:
+                            BorderColor: =RGBA(210, 208, 206, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            FillColor: =RGBA(61, 95, 174, 1)
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =244
+                            Width: =292
+                            X: =796
+                            Y: =34
+                            ZIndex: =5
+
+                    "'Care Plan Opted_DataCard2' As typedDataCard.comboBoxEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="CarePlanOpted"
+                        Default: =ThisItem.'Care Plan Opted'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"CarePlanOpted")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =DataCardValue45.Selected
+                        Width: =604
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey45 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue45 As combobox:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            DefaultSelectedItems: =Parent.Default
+                            DisplayFields: =["Value"]
+                            DisplayMode: =Parent.DisplayMode
+                            Items: =Choices([@'Referral form1'].'Care Plan Opted')
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            SearchFields: =["Value"]
+                            SearchItems: =Choices('Referral form1'.'Care Plan Opted',DataCardValue45.SearchText)
+                            SelectMultiple: =false
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey45.Y + DataCardKey45.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage45 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue45.Y + DataCardValue45.Height
+                            ZIndex: =3
+
+                        StarVisible45 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey45.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey45.Y
+                            ZIndex: =4
+
+                    "'Care Centre Opted_DataCard2' As typedDataCard.comboBoxEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="CareCentreOpted"
+                        Default: =ThisItem.'Care Centre Opted'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"CareCentreOpted")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =DataCardValue46.Selected
+                        Width: =604
+                        X: =1
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey46 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue46 As combobox:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            DefaultSelectedItems: =Parent.Default
+                            DisplayFields: =["Value"]
+                            DisplayMode: =Parent.DisplayMode
+                            Items: =Choices([@'Referral form1'].'Care Centre Opted')
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            SearchFields: =["Value"]
+                            SearchItems: =Choices('Referral form1'.'Care Centre Opted',DataCardValue46.SearchText)
+                            SelectMultiple: =false
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey46.Y + DataCardKey46.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage46 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue46.Y + DataCardValue46.Height
+                            ZIndex: =3
+
+                        StarVisible46 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey46.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey46.Y
+                            ZIndex: =4
+
+        DataCard6 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varForm2 && varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Referred"
+            Width: =1366
+            X: =0
+            Y: =5
+            ZIndex: =6
+
+            Rectangle7_3 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1205
+                X: =76
+                Y: =27
+                ZIndex: =1
+
+            Button4 As button:
+                Fill: =Color.Red
+                HoverFill: =Self.Fill
+                OnSelect: |-
+                    =Patch(
+                        'Referral form1',
+                        LookUp(
+                            'Referral form1',
+                            'Referral Number' = varCurrentItem.'Referral Number'
+                        ),
+                        {Status: "Rejected"},
+                        Form3.Updates
+                    );
+                    Navigate(SuccessScreen);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Reject"
+                X: =702
+                Y: =38
+                ZIndex: =2
+
+            Button4_1 As button:
+                Fill: =Color.Green
+                HoverFill: =Self.Fill
+                OnSelect: |
+                    =Patch(
+                        'Referral form1',
+                        LookUp(
+                            'Referral form1',
+                            'Referral Number' = varCurrentItem.'Referral Number'
+                        ),
+                        {Status: "Open"},
+                        Form3.Updates
+                    );
+                    Navigate(SuccessScreen);
+                    'MailtoAssistantManagerforServiceuser/FamilyVisit-Ver25'.Run(varCurrentItem.Title);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Approve"
+                X: =477
+                Y: =38
+                ZIndex: =3
+
+            Icon6_1 As icon.BackArrow:
+                Color: =RGBA(246, 88, 16, 1)
+                Height: =40
+                Icon: =Icon.BackArrow
+                OnSelect: =Set(varForm1,true);Set(varForm2,false);
+                Width: =40
+                X: =128
+                Y: =38
+                ZIndex: =4
+
+        DataCard7 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varLoginUser.Role="Assistant Manager"&&!varNotifyUser
+            Width: =1366
+            X: =0
+            Y: =6
+            ZIndex: =7
+
+            Rectangle11 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1211
+                X: =86
+                Y: =3
+                ZIndex: =1
+
+            Button5 As button:
+                Color: =Color.White
+                Fill: =RGBA(246, 88, 16, 1)
+                OnSelect: |-
+                    =Set(varNotifyUser,true);
+                    Set(varForm1,false);
+                    Set(varForm2,true);
+                    If(varLoginUser.Role="Assistant Manager"&&varCurrentItem.Status="Open"||varCurrentItem.Status="Intimated",ViewForm(Form3))
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Next"
+                Visible: =varLoginUser.Role="Assistant Manager"
+                X: =1080
+                Y: =16
+                ZIndex: =2
+
+            Icon1 As icon.BackArrow:
+                Color: =RGBA(246, 88, 16, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =40
+                Icon: =Icon.BackArrow
+                Width: =40
+                X: =128
+                Y: =16
+                ZIndex: =3
+
+        DataCard11 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varSocialWorker
+            Width: =1366
+            X: =0
+            Y: =7
+            ZIndex: =8
+
+            Rectangle7_1 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =68
+                Width: =1205
+                X: =80
+                Y: =8
+                ZIndex: =1
+
+            Button6 As button:
+                Fill: =RGBA(246, 88, 16, 1)
+                HoverColor: =Color.White
+                HoverFill: =RGBA(246, 88, 16, 1)
+                OnSelect: |
+                    =Set(
+                        randLowest,
+                        1
+                    );
+                    Set(
+                        randHighest,
+                        99999
+                    );
+                    Set(
+                        randBetween,
+                        RoundDown(
+                            Rand() * (randHighest - randLowest + 1) + randLowest,
+                            0
+                        )
+                    );
+                    Patch(
+                        'Referral form1',
+                        Defaults('Referral form1'),
+                        {
+                            'Referral Number': "GCCDC-" & randBetween,
+                            Status: "Open"
+                        },
+                        frm_ReferalForm.Updates
+                    );
+                    Navigate(SuccessScreen);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Submit"
+                X: =583
+                Y: =22
+                ZIndex: =2
+
+        DataCard12 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varManualUpload
+            Width: =1366
+            X: =0
+            Y: =8
+            ZIndex: =9
+
+            Rectangle7_4 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1205
+                X: =87
+                Y: =21
+                ZIndex: =1
+
+            Button2_1 As button:
+                Fill: =RGBA(246, 88, 16, 1)
+                HoverFill: =RGBA(246, 88, 16, 1)
+                OnSelect: |-
+                    =Set(varForm1,false);
+                    Set(randLowest, 1);
+                    Set(randHighest, 99999);
+                    Set(randBetween, RoundDown(Rand()*(randHighest-randLowest + 1)+randLowest,0));
+                    Patch('Referral form1', Defaults('Referral form1'), {
+                        Title:varCurrentFormProcessorItem.Name,
+                        'Referral Number':"GCCDC-"&randBetween,
+                        'Client Mobile Number':varCurrentFormProcessorItem.'Mobile Number',
+                        'Client Email':varCurrentFormProcessorItem.Email,
+                        'Client DOB':varCurrentFormProcessorItem.'Date of Birth',
+                        'Referrer Name':varCurrentFormProcessorItem.'Referrer Name',
+                        'Referrer Mobile Number':varCurrentFormProcessorItem.'Referrer''s Mobile Number',
+                        'Referrer Email Id':varCurrentFormProcessorItem.'Referrer''s Email',
+                        'Referrer Relation to Client':varCurrentFormProcessorItem.'Relation to Client',
+                        'Referral Reason':varCurrentFormProcessorItem.'Referral Reason',
+                        'Start Date of Care Program':varCurrentFormProcessorItem.'Start date of care Program',
+                        'End Date of Care Program':varCurrentFormProcessorItem.'End date of care Program',
+                        'Date of Referral':varCurrentFormProcessorItem.'Date of Referral',
+                        'Client Gender':{Value:varCurrentFormProcessorItem.Gender},
+                        Status:"Referred"
+                    
+                          }
+                    );
+                    Navigate(SuccessScreen,ScreenTransition.Cover);
+                    MailtoDutyManagerforReferralform2.Run(varCurrentItem.Title);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Submit"
+                X: =1084
+                Y: =28
+                ZIndex: =2
+
+            Icon6_2 As icon.BackArrow:
+                Color: =RGBA(246, 88, 16, 1)
+                Height: =40
+                Icon: =Icon.BackArrow
+                OnSelect: =Navigate(dashBoardScreen,ScreenTransition.Cover);
+                Width: =40
+                X: =111
+                Y: =28
+                ZIndex: =3
+
+        DataCard13 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varLoginUser.Role="Assistant Manager"&&varCurrentItem.Status="Open"&&varNotifyUser=true
+            Width: =1366
+            X: =0
+            Y: =9
+            ZIndex: =10
+
+            Container3 As groupContainer.manualLayoutContainer:
+                Height: =238
+                Width: =1199
+                X: =86
+                ZIndex: =1
+
+                Form2 As form:
+                    DataSource: ='Referral form1'
+                    Fill: =Color.White
+                    Height: =186
+                    Item: =varCurrentItem
+                    NumberOfColumns: =2
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    "'Visit Date_DataCard1' As typedDataCard.dateEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="VisitDate"
+                        Default: =ThisItem.'Visit Date'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"VisitDate")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =DataCardValue40.SelectedDate
+                        Width: =599
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey40 As label:
+                            AutoHeight: =true
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue40 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            DefaultDate: =Parent.Default
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey40.Y + DataCardKey40.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage40 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue40.Y + DataCardValue40.Height
+                            ZIndex: =3
+
+                        StarVisible40 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey40.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey40.Y
+                            ZIndex: =4
+
+            Button8 As button:
+                Fill: =RGBA(246, 88, 16, 1)
+                HoverFill: =RGBA(246, 88, 16, 1)
+                OnSelect: |-
+                    =Patch(
+                        'Referral form1',
+                        LookUp(
+                            'Referral form1',
+                            'Referral Number' = varCurrentItem.'Referral Number'
+                        ),
+                        {Status: "Intimated",
+                        'Visit Date':DataCardValue40.SelectedDate}
+                        
+                    );
+                    Navigate(SuccessScreen);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Notify User"
+                X: =786
+                Y: =48
+                ZIndex: =2
+
+        DataCard14 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varNotifyUser&&varCurrentItem.Status="Intimated"
+            Width: =1366
+            X: =0
+            Y: =10
+            ZIndex: =11
+
+            Rectangle13 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1205
+                X: =76
+                Y: =27
+                ZIndex: =1
+
+            Button10 As button:
+                Fill: =RGBA(246, 88, 16, 1)
+                OnSelect: |-
+                    =Patch(
+                        'Referral form1',
+                        LookUp(
+                            'Referral form1',
+                            'Referral Number' = varCurrentItem.'Referral Number'
+                        ),
+                        {Status: "Visited"
+                        }
+                        
+                    );
+                    Navigate(SuccessScreen);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Confirm Visit"
+                X: =576
+                Y: =40
+                ZIndex: =2
+
+        DataCard15 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =157
+            Visible: =varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Visited"&&varForm2=true
+            Width: =1366
+            X: =0
+            Y: =11
+            ZIndex: =12
+
+            Container4 As groupContainer.manualLayoutContainer:
+                Height: =220
+                Width: =1210
+                X: =74
+                Y: =18
+                ZIndex: =1
+
+                Form8 As form:
+                    DataSource: ='Referral form1'
+                    DefaultMode: =FormMode.New
+                    Fill: =Color.White
+                    Height: =220
+                    NumberOfColumns: =2
+                    Width: =1208
+                    X: =2
+                    ZIndex: =1
+
+                    "'Is user satisfied with the care facility?_DataCard1' As typedDataCard.toggleEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Isusersatisfiedwiththecarefacili"
+                        Default: =ThisItem.'Is user satisfied with the care facility?'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Isusersatisfiedwiththecarefacili")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =DataCardValue34.Value
+                        Width: =604
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey34 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue34 As toggleSwitch:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            Default: =Parent.Default
+                            DisplayMode: =Parent.DisplayMode
+                            Tooltip: =Parent.DisplayName
+                            X: =30
+                            Y: =DataCardKey34.Y + DataCardKey34.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage34 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue34.Y + DataCardValue34.Height
+                            ZIndex: =3
+
+                        StarVisible34 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey34.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey34.Y
+                            ZIndex: =4
+
+                    "'Reconfirm the arrival date_DataCard1' As typedDataCard.dateEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Reconfirmthearrivaldate"
+                        Default: =ThisItem.'Reconfirm the arrival date'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Reconfirmthearrivaldate")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =DataCardValue35.SelectedDate
+                        Width: =604
+                        X: =1
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey35 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue35 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            DefaultDate: =Parent.Default
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey35.Y + DataCardKey35.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage35 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue35.Y + DataCardValue35.Height
+                            ZIndex: =3
+
+                        StarVisible35 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey35.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey35.Y
+                            ZIndex: =4
+
+                    "'Emergency Mobile Number_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="EmergencyMobileNumber"
+                        Default: =ThisItem.'Emergency Mobile Number'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"EmergencyMobileNumber")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "EmergencyMobileNumber")
+                        Required: =false
+                        Update: =DataCardValue36.Text
+                        Width: =604
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey36 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue36 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage36 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue36.Y + DataCardValue36.Height
+                            ZIndex: =3
+
+                        StarVisible36 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey36.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey36.Y
+                            ZIndex: =4
+
+                    "'Emergency Email_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="EmergencyEmail"
+                        Default: =ThisItem.'Emergency Email'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"EmergencyEmail")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "EmergencyEmail")
+                        Required: =false
+                        Update: =DataCardValue37.Text
+                        Width: =604
+                        X: =1
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey37 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue37 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage37 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue37.Y + DataCardValue37.Height
+                            ZIndex: =3
+
+                        StarVisible37 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey37.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey37.Y
+                            ZIndex: =4
+
+        DataCard16 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Visited"&&varForm2=true
+            Width: =1366
+            X: =0
+            Y: =12
+            ZIndex: =13
+
+            Rectangle12 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1205
+                X: =76
+                Y: =27
+                ZIndex: =1
+
+            Button7 As button:
+                Fill: =RGBA(246, 88, 16, 1)
+                OnSelect: |
+                    =Patch(
+                        'Referral form1',
+                        LookUp(
+                            'Referral form1',
+                            'Referral Number' = varCurrentItem.'Referral Number'
+                        ),
+                        {Status: "Closed"},
+                        Form8.Updates
+                    );
+                    Navigate(SuccessScreen);
+                    thearrivaloftheServiceUser.Run(varCurrentItem.Title)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Submit"
+                X: =1053
+                Y: =39
+                ZIndex: =2
+
+            Icon8 As icon.BackArrow:
+                Color: =RGBA(246, 88, 16, 1)
+                Height: =40
+                Icon: =Icon.BackArrow
+                OnSelect: =Set(varForm1,true);Set(varForm2,false);
+                Width: =40
+                X: =128
+                Y: =37
+                ZIndex: =3
+
+        DataCard17 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =varForm2 && varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Open"
+            Width: =1366
+            X: =0
+            Y: =13
+            ZIndex: =14
+
+            Rectangle7_5 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1205
+                X: =75
+                Y: =15
+                ZIndex: =1
+
+            Icon6_3 As icon.BackArrow:
+                Color: =RGBA(246, 88, 16, 1)
+                Height: =40
+                Icon: =Icon.BackArrow
+                OnSelect: =Set(varForm1,true);Set(varForm2,false);
+                Width: =40
+                X: =128
+                Y: =25
+                ZIndex: =2
+

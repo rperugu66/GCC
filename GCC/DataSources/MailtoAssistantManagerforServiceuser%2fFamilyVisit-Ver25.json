@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "4f0016c4-77f6-4aba-b20c-08883d0dd4fb",
+    "Name": "MailtoAssistantManagerforServiceuser/FamilyVisit-Ver25",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

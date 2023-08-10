@@ -1,0 +1,118 @@
+"SuccessScreen As screen.'tabletLayout_Success_ver3.0'":
+
+    iconCircle1 As circle.Circle:
+        Fill: =Color.Green
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =1
+
+    iconCheck1 As icon.Check:
+        Height: =iconCircle1.Height
+        Icon: =Icon.Check
+        PaddingBottom: =Self.PaddingTop
+        PaddingLeft: =Self.PaddingTop
+        PaddingRight: =Self.PaddingTop
+        PaddingTop: =24
+        Width: =iconCircle1.Width
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =2
+
+    LblSuccessMsg1 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Height: =iconCircle1.Height
+        Size: =20
+        Text: =" successfully completed"
+        Width: =Parent.Width * 0.75
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =iconCheck1.Y + iconCheck1.Height + 100
+        ZIndex: =3
+
+    Rectangle1_4 As rectangle:
+        Fill: =RGBA(53, 109, 166, 1)
+        Height: =56
+        Width: =1366
+        ZIndex: =4
+
+    Image2_6 As image:
+        Height: =56
+        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+        Width: =250
+        X: =17
+        ZIndex: =5
+
+    Label1_4 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Size: =20
+        Text: ="GCC Adult Care Center"
+        Width: =493
+        X: =390
+        ZIndex: =6
+
+    Image3_3 As image:
+        Height: =56
+        Image: =User().Image
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =56
+        RadiusBottomRight: =56
+        RadiusTopLeft: =56
+        RadiusTopRight: =56
+        Width: =56
+        X: =1000
+        ZIndex: =7
+
+    Label5_3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Size: =16
+        Text: =User().FullName
+        Width: =299
+        X: =1067
+        ZIndex: =8
+
+    Label7 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =55
+        Size: =15
+        Text: |-
+            =" Your Case ID is:"
+        Width: =168
+        X: =523
+        Y: =531
+        ZIndex: =9
+
+    Icon7 As icon.Cancel:
+        Color: =RGBA(255, 0, 0, 1)
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =Set(varManualUpload,false);
+            If(
+                varLoginUser.Role = "Duty Manager" || varLoginUser.Role = "Assistant Manager",
+                Navigate(
+                    dashBoardScreen,
+                    ScreenTransition.Cover
+                ),
+                Navigate(
+                    socialCareTeamdashBoard,
+                    ScreenTransition.Cover
+                )
+            );
+        X: =1184
+        Y: =96
+        ZIndex: =10
+
+    Label11 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =57
+        OnSelect: =If(varLoginUser.Role="Social Care Team",Navigate(socialCareTeamdashBoard),Navigate(dashBoardScreen));
+        Size: =16
+        Text: =If(varLoginUser.Role="Social Care Team","GCCDC-"&randBetween, varCurrentItem.'Referral Number')
+        Underline: =true
+        X: =691
+        Y: =531
+        ZIndex: =11
+

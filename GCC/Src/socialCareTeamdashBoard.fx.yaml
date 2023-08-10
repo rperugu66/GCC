@@ -1,0 +1,593 @@
+socialCareTeamdashBoard As screen:
+    Fill: =RGBA(237, 237, 237, 1)
+    OnVisible: =Set(varNewform,false);
+
+    Rectangle4 As rectangle:
+        Fill: =RGBA(219, 219, 219, 1)
+        Height: =62
+        Visible: =false
+        Width: =1366
+        Y: =60
+        ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+        BorderColor: =Color.Gray
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =507
+        Items: ='Referral form1'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =57
+        Width: =1250
+        X: =68
+        Y: =238
+        ZIndex: =2
+
+        Title3 As label:
+            Color: =RGBA(56, 96, 178, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Referral Number'
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.Width/6.2
+            X: =30
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(varCurrentItem,ThisItem);ViewForm(frm_ReferalForm);Navigate(ReferalFormScreen);
+            PaddingBottom: =12
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =12
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        Separator3 As rectangle:
+            Fill: =RGBA(166, 166, 166, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =3
+
+        Rectangle8 As rectangle:
+            Height: =Parent.TemplateHeight - Separator3.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =4
+
+        Title3_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.Width/6
+            X: =Title3.X+Title3.Width-20
+            Y: =17
+            ZIndex: =5
+
+        Title3_2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Care Plan Opted'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.Width/4.5
+            X: =Title3_1.X+Title3_1.Width-30
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =6
+
+        Title3_5 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Date of Referral'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.Width/7
+            X: =Title3_2.X+Title3_2.Width
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =9
+
+        Title3_6 As label:
+            Align: =Align.Center
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Start Date of Care Program'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.Width/8
+            X: =Title3_5.X+Title3_5.Width
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =10
+
+        Title3_7 As label:
+            Align: =Align.Center
+            Color: =RGBA(56, 96, 178, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Status
+            VerticalAlign: =VerticalAlign.Top
+            Width: =151
+            X: =987
+            Y: =17
+            ZIndex: =11
+
+        Icon10 As icon.View:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =30
+            Icon: =Icon.View
+            OnSelect: |-
+                =Set(
+                    varHistory,
+                    GetVersionHistory.Run(ThisItem.ID).history
+                );
+                //Set(varHistory1,'Copyof-GetVersionHistory'.Run(ThisItem.ID));
+                
+                Set(varHistoryPopUp,true);
+                ClearCollect(
+                    colFinalData,
+                    Split(
+                        varHistory,
+                        "|"
+                    )
+                );
+                
+                Sort(
+                    colFinalData,
+                    Date(ThisItem.Created,"",""),SortOrder.Descending
+                );
+            Width: =30
+            X: =1138
+            Y: =13
+            ZIndex: =12
+
+    Rectangle1_1 As rectangle:
+        Fill: =RGBA(53, 109, 166, 1)
+        Height: =85
+        Width: =1366
+        ZIndex: =3
+
+    Image2_3 As image:
+        Height: =65
+        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+        Width: =250
+        X: =17
+        Y: =10
+        ZIndex: =4
+
+    Label1_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =65
+        Size: =26
+        Text: ="GCC Adult Care Center"
+        Width: =493
+        X: =417
+        Y: =10
+        ZIndex: =5
+
+    Label4 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(53, 109, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        OnSelect: =
+        Size: =14
+        Text: ="       Case Id                  Name                             Service Opted                   Referral Date      Tentative Start Date   Status   History"
+        Width: =1250
+        X: =68
+        Y: =208
+        ZIndex: =6
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Button3 As button:
+            BorderThickness: =0
+            Fill: =RGBA(141, 198, 63, 1)
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Set(varNewform,true)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: =    "New Form"
+            Width: =175
+            X: =1129
+            Y: =98
+            ZIndex: =7
+
+        Icon2 As icon.Add:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =25
+            Icon: =Icon.Add
+            OnSelect: =Set(varNewform,true)
+            Width: =25
+            X: =1145
+            Y: =108
+            ZIndex: =8
+
+    Image3 As image:
+        Height: =65
+        Image: =User().Image
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =56
+        RadiusBottomRight: =56
+        RadiusTopLeft: =56
+        RadiusTopRight: =56
+        Width: =50
+        X: =1033
+        Y: =10
+        ZIndex: =9
+
+    Label5 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =65
+        Size: =16
+        Text: =User().FullName
+        Width: =256
+        X: =1083
+        Y: =10
+        ZIndex: =10
+
+    grpNewformPopup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =14
+
+        Rectangle9 As rectangle:
+            Fill: =RGBA(0,0,0,0.7)
+            Height: =768
+            OnSelect: =false                                   
+            Visible: =varNewform
+            Width: =1366
+            ZIndex: =11
+
+        Rectangle10 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =312
+            Visible: =varNewform
+            Width: =658
+            X: =353
+            Y: =171
+            ZIndex: =12
+
+        Label6 As label:
+            Align: =Align.Center
+            BorderColor: =Color.DarkOrange
+            BorderThickness: =2
+            Fill: =Color.White
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            Size: =16
+            Text: ="Choose the appropriate option?"
+            Visible: =varNewform
+            Width: =554
+            X: =406
+            Y: =259
+            ZIndex: =13
+
+        Radio1 As radio:
+            BorderColor: =Color.White
+            Height: =66
+            Items: =["Upload manual form","Digital Referral form"]
+            Layout: =Layout.Horizontal
+            OnSelect: |
+                =If(
+                    Radio1.Selected.Value = "Upload manual form",
+                    Set(
+                        varNewform,
+                        false
+                    );
+                    Set(
+                        varManualUpload,
+                        true
+                    ); Set(varSocialWorker,false);
+                );
+                If(
+                    Radio1.Selected.Value = "Digital Referral form",
+                    Set(
+                        varNewform,
+                        false
+                    );
+                    Set(varSocialWorker,true);
+                    Set(
+                        varDigitalForm,
+                        false
+                    );
+                    Set(varForm1,false);Set(varForm2,false);
+                    NewForm(frm_ReferalForm);
+                    Navigate(
+                        ReferalFormScreen,
+                        ScreenTransition.Cover
+                    )
+                );
+            Size: =16
+            Visible: =varNewform
+            Width: =554
+            X: =406
+            Y: =324
+            ZIndex: =14
+
+        Icon3 As icon.Cancel:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varNewform,false)
+            Visible: =varNewform
+            Width: =40
+            X: =959
+            Y: =184
+            ZIndex: =15
+
+    Label8 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =43
+        Size: =18
+        Text: ="Social Care Team Dashboard"
+        Width: =500
+        X: =486
+        Y: =96
+        ZIndex: =20
+
+    Rectangle14 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.8)
+        Height: =767
+        Visible: =varHistoryPopUp
+        Width: =1366
+        Y: =1
+        ZIndex: =27
+
+    grpManualUploadPopup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        Rectangle5 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varManualUpload
+            Width: =1366
+            ZIndex: =21
+
+        Rectangle6 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =613
+            Visible: =varManualUpload
+            Width: =838
+            X: =296
+            Y: =65
+            ZIndex: =22
+
+        FormProcessor1 As FormProcessor:
+            BorderColor: =RGBA(210, 208, 206, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(61, 95, 174, 1)
+            FontColor: =RGBA(255, 255, 255, 1)
+            Height: =520
+            ModelId: |-
+                ="Document Processing RF1 16/7/2023, 5:52:08 pm (1da0ea84-d2c9-4b70-81ef-efe709d1ab33)"
+            Visible: =varManualUpload
+            Width: =406
+            X: =392
+            Y: =108
+            ZIndex: =23
+
+        Icon4 As icon.Cancel:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =50
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varManualUpload,false)
+            Visible: =varManualUpload
+            Width: =50
+            X: =1034
+            Y: =88
+            ZIndex: =24
+
+        Icon5 As icon.NextArrow:
+            Color: =Color.Orange
+            Icon: =Icon.NextArrow
+            OnSelect: |-
+                =Set(varCurrentFormProcessorItem,FormProcessor1.Fields);
+                Set(varManualUpload,true);
+                Set(randLowest, 1);
+                Set(randHighest, 99999);
+                Set(randBetween, RoundDown(Rand()*(randHighest-randLowest + 1)+randLowest,0));
+                
+                EditForm(frm_ReferalForm);
+                Navigate(ReferalFormScreen);
+            Visible: =varManualUpload
+            X: =922
+            Y: =307
+            ZIndex: =25
+
+        Label9 As label:
+            Align: =Align.Center
+            BorderColor: =Color.Orange
+            BorderThickness: =2
+            FontWeight: =FontWeight.Bold
+            OnSelect: |-
+                =Set(varCurrentFormProcessorItem,FormProcessor1.Fields);
+                Set(varManualUpload,true);
+                Set(randLowest, 1);
+                Set(randHighest, 99999);
+                Set(randBetween, RoundDown(Rand()*(randHighest-randLowest + 1)+randLowest,0));
+                
+                EditForm(frm_ReferalForm);
+                Navigate(ReferalFormScreen);
+            Size: =16
+            Text: ="Proceed"
+            Visible: =varManualUpload
+            X: =879
+            Y: =389
+            ZIndex: =26
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        Rectangle18 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =649
+            Visible: =varHistoryPopUp
+            Width: =829
+            X: =205
+            Y: =60
+            ZIndex: =28
+
+        Rectangle19 As rectangle:
+            Fill: =RGBA(204, 231, 246, 1)
+            Height: =61
+            Visible: =varHistoryPopUp
+            Width: =680
+            X: =279
+            Y: =151
+            ZIndex: =29
+
+        Label12 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =15
+            Text: ="Created"
+            Visible: =varHistoryPopUp
+            Width: =167
+            X: =342
+            Y: =166
+            ZIndex: =30
+
+        Label16 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =15
+            Text: ="Version"
+            Visible: =varHistoryPopUp
+            Width: =128
+            X: =492
+            Y: =166
+            ZIndex: =31
+
+        Label19 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =15
+            Text: ="Modified By"
+            Visible: =varHistoryPopUp
+            Width: =191
+            X: =598
+            Y: =166
+            ZIndex: =32
+
+        Label20 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =15
+            Text: ="Referral Number"
+            Visible: =varHistoryPopUp
+            Width: =260
+            X: =751
+            Y: =166
+            ZIndex: =33
+
+        Icon11 As icon.Cancel:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varHistoryPopUp,false);
+            Visible: =varHistoryPopUp
+            Width: =44
+            X: =973
+            Y: =93
+            ZIndex: =34
+
+        "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            DelayItemLoading: =true
+            Height: =457
+            Items: =colFinalData
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =73
+            Visible: =varHistoryPopUp
+            Width: =918
+            X: =227
+            Y: =220
+            ZIndex: =35
+
+            Separator1 As rectangle:
+                Height: =0
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Label21 As label:
+                Height: =49
+                OnSelect: =Select(Parent)
+                Size: =14
+                Text: =ThisItem.Value
+                Width: =839
+                X: =78
+                Y: =6
+                ZIndex: =7
+

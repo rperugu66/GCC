@@ -4,7 +4,7 @@
     ReferalFormCanvas As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(237, 237, 237, 1)
-        Height: =743
+        Height: =728
         Width: =Parent.Width
         Y: =
         ZIndex: =3
@@ -1447,14 +1447,15 @@
 
             Rectangle7_2 As rectangle:
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =60
-                Width: =1205
-                X: =86
-                Y: =10
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
             Button2 As button:
-                Fill: =RGBA(246, 88, 16, 1)
+                Fill: |+
+                    =RGBA(53, 109, 166, 1)
+                    
+                Font: =Font.'Segoe UI'
                 HoverFill: =RGBA(246, 88, 16, 1)
                 OnSelect: |-
                     =Set(varForm1,false);Set(varForm2,true);EditForm(Form3);
@@ -1463,19 +1464,20 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Next"
-                X: =1083
-                Y: =17
+                X: =1094
+                Y: =30
                 ZIndex: =2
 
             Icon6 As icon.BackArrow:
-                Color: =RGBA(246, 88, 16, 1)
+                Color: =RGBA(53, 109, 166, 1)
                 Height: =40
                 Icon: =Icon.BackArrow
                 OnSelect: =Navigate(dashBoardScreen,ScreenTransition.Cover);
                 Width: =40
-                X: =110
-                Y: =17
+                X: =71
+                Y: =30
                 ZIndex: =3
 
         DataCard5 As dataCard.blankCard:
@@ -1491,10 +1493,8 @@
             ZIndex: =5
 
             Container2 As groupContainer.manualLayoutContainer:
-                Height: =466
-                Width: =1210
-                X: =74
-                Y: =10
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
                 Form3 As form:
@@ -1502,11 +1502,10 @@
                     DefaultMode: =If(varCurrentItem.Status="Open",FormMode.View,FormMode.Edit)
                     Fill: |
                         =Color.White
-                    Height: =466
+                    Height: =Parent.Height
                     Item: =varCurrentItem
                     NumberOfColumns: =2
-                    Width: =1208
-                    X: =2
+                    Width: =Parent.Width
                     ZIndex: =1
 
                     "'Medical Condition_DataCard2' As typedDataCard.textualEditCard":
@@ -1528,8 +1527,10 @@
                         DataCardKey44 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1539,9 +1540,11 @@
 
                         DataCardValue44 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            BorderThickness: =1
                             Default: =If(varCurrentItem.Status="Open"||varCurrentItem.Status="Visited"||varCurrentItem.Status="Intimated",Parent.Default, Concat(TextRecognizer1.Results,Text))
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             Height: =229
                             MaxLength: =Parent.MaxLength
                             Mode: =TextMode.MultiLine
@@ -1613,8 +1616,10 @@
                         DataCardKey45 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1624,9 +1629,11 @@
 
                         DataCardValue45 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            BorderThickness: =1
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             Items: =Choices([@'Referral form1'].'Care Plan Opted')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
@@ -1681,8 +1688,10 @@
                         DataCardKey46 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -1692,9 +1701,11 @@
 
                         DataCardValue46 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            BorderThickness: =1
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             Items: =Choices([@'Referral form1'].'Care Centre Opted')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
@@ -1745,14 +1756,13 @@
 
             Rectangle7_3 As rectangle:
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =60
-                Width: =1205
-                X: =76
-                Y: =27
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
             Button4 As button:
                 Fill: =Color.Red
+                Font: =Font.'Segoe UI'
                 HoverFill: =Self.Fill
                 OnSelect: |-
                     =Patch(
@@ -1769,6 +1779,7 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Reject"
                 X: =702
                 Y: =38
@@ -1776,6 +1787,7 @@
 
             Button4_1 As button:
                 Fill: =Color.Green
+                Font: =Font.'Segoe UI'
                 HoverFill: =Self.Fill
                 OnSelect: |
                     =Patch(
@@ -1793,13 +1805,14 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Approve"
                 X: =477
                 Y: =38
                 ZIndex: =3
 
             Icon6_1 As icon.BackArrow:
-                Color: =RGBA(246, 88, 16, 1)
+                Color: =RGBA(53, 109, 166, 1)
                 Height: =40
                 Icon: =Icon.BackArrow
                 OnSelect: =Set(varForm1,true);Set(varForm2,false);

@@ -60,7 +60,7 @@ dashBoardScreen As screen:
             PaddingTop: =12
             Tooltip: ="View item details"
             Width: =40
-            X: =1203
+            X: =1187
             Y: =7
             ZIndex: =2
 

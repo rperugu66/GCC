@@ -684,8 +684,10 @@
                         DataCardKey6 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -695,9 +697,11 @@
 
                         DataCardValue6 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
                             Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer Name',Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -756,8 +760,10 @@
                         DataCardKey7 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -767,9 +773,11 @@
 
                         DataCardValue7 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
                             Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer''s Mobile Number',Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -828,8 +836,10 @@
                         DataCardKey8 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -839,9 +849,11 @@
 
                         DataCardValue8 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
                             Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer''s Email',Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -900,8 +912,10 @@
                         DataCardKey9 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -911,9 +925,11 @@
 
                         DataCardValue9 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
                             Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Relation to Client',Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0

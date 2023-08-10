@@ -4,7 +4,7 @@
     ReferalFormCanvas As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(237, 237, 237, 1)
-        Height: =728
+        Height: =768
         Width: =Parent.Width
         Y: =
         ZIndex: =3
@@ -107,16 +107,16 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =493
+            Height: =473
             Visible: =varForm1 
             Width: =1366
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =3
 
             Container1 As groupContainer.manualLayoutContainer:
                 Fill: =Color.Transparent
-                Height: =497
+                Height: =473
                 Width: =Parent.Width
                 ZIndex: =1
 
@@ -124,7 +124,7 @@
                     DataSource: ='Referral form1'
                     DefaultMode: =FormMode.New
                     Fill: =Color.White
-                    Height: =496
+                    Height: =473
                     Item: =If(varManualUpload=true,varCurrentFormProcessorItem,varCurrentItem)
                     NumberOfColumns: =2
                     Width: =Parent.Width
@@ -1485,15 +1485,15 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =480
+            Height: =538
             Visible: =varForm2 
             Width: =1366
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =5
 
             Container2 As groupContainer.manualLayoutContainer:
-                Height: =Parent.Height
+                Height: =549
                 Width: =Parent.Width
                 ZIndex: =1
 
@@ -1502,7 +1502,7 @@
                     DefaultMode: =If(varCurrentItem.Status="Open",FormMode.View,FormMode.Edit)
                     Fill: |
                         =Color.White
-                    Height: =Parent.Height
+                    Height: =549
                     Item: =varCurrentItem
                     NumberOfColumns: =2
                     Width: =Parent.Width
@@ -1835,15 +1835,14 @@
 
             Rectangle11 As rectangle:
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =60
-                Width: =1211
-                X: =86
-                Y: =3
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
             Button5 As button:
                 Color: =Color.White
-                Fill: =RGBA(246, 88, 16, 1)
+                Fill: =RGBA(53, 109, 166, 1)
+                Font: =Font.'Segoe UI'
                 OnSelect: |-
                     =Set(varNotifyUser,true);
                     Set(varForm1,false);
@@ -1853,20 +1852,21 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Next"
                 Visible: =varLoginUser.Role="Assistant Manager"
-                X: =1080
-                Y: =16
+                X: =1091
+                Y: =30
                 ZIndex: =2
 
             Icon1 As icon.BackArrow:
-                Color: =RGBA(246, 88, 16, 1)
+                Color: =RGBA(53, 109, 166, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =40
                 Icon: =Icon.BackArrow
                 Width: =40
-                X: =128
-                Y: =16
+                X: =52
+                Y: =30
                 ZIndex: =3
 
         DataCard11 As dataCard.blankCard:
@@ -2000,7 +2000,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =196
             Visible: =varLoginUser.Role="Assistant Manager"&&varCurrentItem.Status="Open"&&varNotifyUser=true
             Width: =1366
             X: =0
@@ -2008,15 +2008,14 @@
             ZIndex: =10
 
             Container3 As groupContainer.manualLayoutContainer:
-                Height: =238
-                Width: =1199
-                X: =86
+                Height: =193
+                Width: =Parent.Width
                 ZIndex: =1
 
                 Form2 As form:
                     DataSource: ='Referral form1'
                     Fill: =Color.White
-                    Height: =186
+                    Height: =189
                     Item: =varCurrentItem
                     NumberOfColumns: =2
                     Width: =Parent.Width
@@ -2039,7 +2038,11 @@
 
                         DataCardKey40 As label:
                             AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2049,12 +2052,15 @@
 
                         DataCardValue40 As datepicker:
                             BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            BorderThickness: =1
                             DefaultDate: =Parent.Default
                             DisplayMode: =Parent.DisplayMode
                             EndYear: =Year(Today())+100
+                            Font: =Font.'Segoe UI'
                             IsEditable: =true
                             PaddingBottom: =0
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            Size: =13
                             StartYear: =1899
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
@@ -2088,7 +2094,8 @@
                             ZIndex: =4
 
             Button8 As button:
-                Fill: =RGBA(246, 88, 16, 1)
+                Fill: =RGBA(53, 109, 166, 1)
+                Font: =Font.'Segoe UI'
                 HoverFill: =RGBA(246, 88, 16, 1)
                 OnSelect: |-
                     =Patch(
@@ -2106,6 +2113,7 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Notify User"
                 X: =786
                 Y: =48

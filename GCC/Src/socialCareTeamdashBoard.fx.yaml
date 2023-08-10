@@ -105,8 +105,8 @@ socialCareTeamdashBoard As screen:
             Text: =ThisItem.'Care Plan Opted'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.Width/4.5
-            X: =Title3_1.X+Title3_1.Width-30
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            X: =369
+            Y: =17
             ZIndex: =6
 
         Title3_5 As label:
@@ -122,8 +122,8 @@ socialCareTeamdashBoard As screen:
             Text: =ThisItem.'Date of Referral'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.Width/7
-            X: =Title3_2.X+Title3_2.Width
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            X: =646
+            Y: =17
             ZIndex: =9
 
         Title3_6 As label:
@@ -140,7 +140,7 @@ socialCareTeamdashBoard As screen:
             Text: =ThisItem.'Start Date of Care Program'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.Width/8
-            X: =Title3_5.X+Title3_5.Width
+            X: =824
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =10
 
@@ -226,7 +226,7 @@ socialCareTeamdashBoard As screen:
         Height: =60
         OnSelect: =
         Size: =14
-        Text: ="       Case Id                  Name                             Service Opted                   Referral Date      Tentative Start Date   Status                     History"
+        Text: ="       Case Id                        Name                     Service Opted                        Referral Date           Tentative Start Date          Status     History"
         Width: =1250
         X: =68
         Y: =176

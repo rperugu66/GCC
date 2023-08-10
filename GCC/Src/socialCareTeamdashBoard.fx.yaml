@@ -20,8 +20,8 @@ socialCareTeamdashBoard As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =57
-        Width: =1250
-        X: =68
+        Width: =1256
+        X: =55
         Y: =238
         ZIndex: =2
 
@@ -226,9 +226,9 @@ socialCareTeamdashBoard As screen:
         Height: =60
         OnSelect: =
         Size: =14
-        Text: ="       Case Id                        Name                     Service Opted                        Referral Date           Tentative Start Date          Status     History"
-        Width: =1250
-        X: =68
+        Text: ="       Case ID                        Name                     Service Opted                        Referral Date           Tentative Start Date          Status     History"
+        Width: =1256
+        X: =55
         Y: =176
         ZIndex: =6
 
@@ -241,7 +241,7 @@ socialCareTeamdashBoard As screen:
 
         Button3 As button:
             BorderThickness: =0
-            Fill: =RGBA(141, 198, 63, 1)
+            Fill: =RGBA(53, 109, 166, 1)
             Font: =Font.'Segoe UI'
             Height: =42
             OnSelect: =Set(varNewform,true)
@@ -252,18 +252,19 @@ socialCareTeamdashBoard As screen:
             Size: =14
             Text: =    "New Form"
             Width: =175
-            X: =1129
-            Y: =98
+            X: =1134
+            Y: =109
             ZIndex: =7
 
         Icon2 As icon.Add:
             Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(53, 109, 166, 1)
             Height: =25
             Icon: =Icon.Add
             OnSelect: =Set(varNewform,true)
             Width: =25
-            X: =1145
-            Y: =108
+            X: =1150
+            Y: =119
             ZIndex: =8
 
     Image3 As image:
@@ -274,7 +275,7 @@ socialCareTeamdashBoard As screen:
         RadiusBottomRight: =56
         RadiusTopLeft: =56
         RadiusTopRight: =56
-        Width: =50
+        Width: =65
         X: =1033
         Y: =10
         ZIndex: =9
@@ -287,7 +288,7 @@ socialCareTeamdashBoard As screen:
         Size: =16
         Text: =User().FullName
         Width: =256
-        X: =1083
+        X: =1098
         Y: =10
         ZIndex: =10
 
@@ -391,7 +392,7 @@ socialCareTeamdashBoard As screen:
         Text: ="Social Care Team Dashboard"
         Width: =500
         X: =486
-        Y: =96
+        Y: =107
         ZIndex: =20
 
     Rectangle14 As rectangle:

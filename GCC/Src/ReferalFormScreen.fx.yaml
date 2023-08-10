@@ -1343,6 +1343,7 @@
                         Checkbox1 As checkbox:
                             BorderColor: =Color.Black
                             Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Consent & Signature',Parent.Default)
+                            Font: =Font.'Segoe UI'
                             Height: =37
                             Text: ="I hereby give consent to Adult care programme to utilize my information"
                             Width: =1083

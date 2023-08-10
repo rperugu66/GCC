@@ -968,82 +968,6 @@
                             Y: =10
                             ZIndex: =4
 
-                    "'Referral Reason_DataCard1' As typedDataCard.textualEditCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="ReferralReason"
-                        Default: =ThisItem.'Referral Reason'
-                        DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"ReferralReason")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "ReferralReason")
-                        Required: =true
-                        Update: =DataCardValue10.Text
-                        Visible: =varReferralform1.step3
-                        Width: =Parent.Width/2
-                        X: =1
-                        Y: =8
-                        ZIndex: =2
-
-                        DataCardKey10 As label:
-                            AutoHeight: =true
-                            Color: =RGBA(0, 0, 0, 1)
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =34
-                            Size: =14
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue10 As text:
-                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
-                            BorderThickness: =1
-                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referral Reason',Parent.Default)
-                            DelayOutput: =true
-                            DisplayMode: =Parent.DisplayMode
-                            Font: =Font.'Segoe UI'
-                            MaxLength: =Parent.MaxLength
-                            PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            Tooltip: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey10.Y + DataCardKey10.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage10 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue10.Y + DataCardValue10.Height
-                            ZIndex: =3
-
-                        StarVisible10 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey10.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            X: =170
-                            Y: =DataCardKey10.Y
-                            ZIndex: =4
-
                     "'Start Date of Care Program_DataCard1' As typedDataCard.dateEditCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="StartDateofCareProgram"
@@ -1273,6 +1197,82 @@
                             Wrap: =false
                             X: =174
                             Y: =DataCardKey14.Y
+                            ZIndex: =4
+
+                    "'Referral Reason_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="ReferralReason"
+                        Default: =ThisItem.'Referral Reason'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"ReferralReason")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "ReferralReason")
+                        Required: =true
+                        Update: =DataCardValue10.Text
+                        Visible: =varReferralform1.step3
+                        Width: =Parent.Width/2
+                        X: =1
+                        Y: =8
+                        ZIndex: =2
+
+                        DataCardKey10 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Size: =14
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue10 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            BorderThickness: =1
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referral Reason',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage10 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue10.Y + DataCardValue10.Height
+                            ZIndex: =3
+
+                        StarVisible10 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey10.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =170
+                            Y: =DataCardKey10.Y
                             ZIndex: =4
 
                     Consent_DataCard1 As typedDataCard.toggleEditCard:

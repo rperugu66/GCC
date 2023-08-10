@@ -268,16 +268,16 @@ socialCareTeamdashBoard As screen:
             ZIndex: =8
 
     Image3 As image:
-        Height: =65
+        Height: =50
         Image: =User().Image
         ImagePosition: =ImagePosition.Fill
         RadiusBottomLeft: =56
         RadiusBottomRight: =56
         RadiusTopLeft: =56
         RadiusTopRight: =56
-        Width: =65
-        X: =1033
-        Y: =10
+        Width: =50
+        X: =1048
+        Y: =17
         ZIndex: =9
 
     Label5 As label:
@@ -321,9 +321,10 @@ socialCareTeamdashBoard As screen:
             BorderColor: =Color.DarkOrange
             BorderThickness: =2
             Fill: =Color.White
+            Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =57
-            Size: =16
+            Size: =14
             Text: ="Choose the appropriate option?"
             Visible: =varNewform
             Width: =554
@@ -332,7 +333,9 @@ socialCareTeamdashBoard As screen:
             ZIndex: =13
 
         Radio1 As radio:
+            Align: =Align.Center
             BorderColor: =Color.White
+            Font: =Font.'Segoe UI'
             Height: =66
             Items: =["Upload manual form","Digital Referral form"]
             Layout: =Layout.Horizontal
@@ -366,11 +369,12 @@ socialCareTeamdashBoard As screen:
                         ScreenTransition.Cover
                     )
                 );
-            Size: =16
+            RadioSize: =30
+            Size: =14
             Visible: =varNewform
             Width: =554
-            X: =406
-            Y: =324
+            X: =457
+            Y: =319
             ZIndex: =14
 
         Icon3 As icon.Cancel:
@@ -456,6 +460,7 @@ socialCareTeamdashBoard As screen:
 
         Icon5 As icon.NextArrow:
             Color: =Color.Orange
+            Height: =45
             Icon: =Icon.NextArrow
             OnSelect: |-
                 =Set(varCurrentFormProcessorItem,FormProcessor1.Fields);
@@ -467,14 +472,16 @@ socialCareTeamdashBoard As screen:
                 EditForm(frm_ReferalForm);
                 Navigate(ReferalFormScreen);
             Visible: =varManualUpload
-            X: =922
-            Y: =307
+            Width: =45
+            X: =928
+            Y: =330
             ZIndex: =25
 
         Label9 As label:
             Align: =Align.Center
             BorderColor: =Color.Orange
             BorderThickness: =2
+            Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             OnSelect: |-
                 =Set(varCurrentFormProcessorItem,FormProcessor1.Fields);
@@ -485,7 +492,7 @@ socialCareTeamdashBoard As screen:
                 
                 EditForm(frm_ReferalForm);
                 Navigate(ReferalFormScreen);
-            Size: =16
+            Size: =14
             Text: ="Proceed"
             Visible: =varManualUpload
             X: =879

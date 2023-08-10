@@ -23,46 +23,54 @@
 
             Rectangle1_2 As rectangle:
                 Fill: =RGBA(53, 109, 166, 1)
-                Height: =56
+                Height: =85
                 Width: =1366
                 ZIndex: =1
 
             Image2_4 As image:
-                Height: =56
+                Height: =65
                 Image: ='Gloucestershire-County-Council-White-logo-1024x188'
                 Width: =250
                 X: =17
+                Y: =10
                 ZIndex: =2
 
             Label1_2 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =56
-                Size: =20
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =65
+                Size: =26
                 Text: ="GCC Adult Care Center"
                 Width: =493
                 X: =390
+                Y: =10
                 ZIndex: =3
 
             Image3_1 As image:
-                Height: =56
+                Height: =50
                 Image: =User().Image
                 ImagePosition: =ImagePosition.Fill
                 RadiusBottomLeft: =56
                 RadiusBottomRight: =56
                 RadiusTopLeft: =56
                 RadiusTopRight: =56
-                Width: =56
-                X: =1000
+                Width: =50
+                X: =1048
+                Y: =17
                 ZIndex: =4
 
             Label5_1 As label:
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =56
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =65
                 Size: =16
                 Text: =User().FullName
-                Width: =299
-                X: =1067
+                Width: =256
+                X: =1098
+                Y: =10
                 ZIndex: =5
 
         DataCard2 As dataCard.blankCard:
@@ -70,25 +78,25 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =68
+            Height: =55
             Width: =1366
             X: =0
             Y: =1
             ZIndex: =2
 
             Rectangle7 As rectangle:
-                Fill: =RGBA(241, 91, 64, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
                 Height: =60
-                Width: =1205
-                X: =76
+                Width: =1366
                 ZIndex: =1
 
             Label10 As label:
                 Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =60
-                Size: =20
+                Size: =18
                 Text: ="Referral Form"
                 Width: =419
                 X: =436
@@ -103,25 +111,23 @@
             Visible: =varForm1 
             Width: =1366
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =3
 
             Container1 As groupContainer.manualLayoutContainer:
                 Fill: =Color.Transparent
-                Height: =519
-                Width: =1200
-                X: =90
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
                 frm_ReferalForm As form:
                     DataSource: ='Referral form1'
                     DefaultMode: =FormMode.New
                     Fill: =Color.White
-                    Height: =515
+                    Height: =Parent.Height
                     Item: =If(varManualUpload=true,varCurrentFormProcessorItem,varCurrentItem)
                     NumberOfColumns: =2
-                    Width: =1200
-                    Y: =4
+                    Width: =Parent.Width
                     ZIndex: =1
 
                     DataCard8 As typedDataCard.blankCard:
@@ -129,28 +135,157 @@
                         BorderStyle: =BorderStyle.Solid
                         DisplayMode: =DisplayMode.Edit
                         Fill: =RGBA(0, 0, 0, 0)
-                        Height: =81
-                        Width: =606
+                        Height: =72
+                        Width: =Parent.Width
                         X: =0
                         Y: =0
                         ZIndex: =1
 
-                        TextInput1 As text:
-                            BorderColor: =RGBA(246, 88, 16, 1)
-                            Color: =RGBA(255, 255, 255, 1)
-                            Default: ="Client Information"
-                            Fill: =RGBA(246, 88, 16, 1)
-                            FontWeight: =FontWeight.Bold
-                            Height: =31
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            Size: =15
-                            Width: =298
-                            X: =30
-                            Y: =24
+                        rct_ClientInformation As rectangle:
+                            Height: =3
+                            Visible: =varReferralform1.step1
+                            Width: =190
+                            X: =36
+                            Y: =45
                             ZIndex: =1
+
+                        icon_ClientInformation As icon.Person:
+                            Height: =25
+                            Icon: =Icon.Person
+                            Width: =25
+                            X: =38
+                            Y: =18
+                            ZIndex: =2
+
+                        lbl_ClientInformation As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Size: =14
+                            Text: ="Client Information"
+                            Width: =180
+                            X: =63
+                            Y: =12
+                            ZIndex: =3
+
+                        "'btn_Client Information' As button":
+                            BorderThickness: =0
+                            Fill: =Color.Transparent
+                            Font: =Font.'Segoe UI'
+                            Height: =45
+                            HoverFill: =Color.Transparent
+                            OnSelect: |-
+                                =Set(
+                                    varReferralform1,
+                                    {
+                                        step1: true,
+                                        step2: false,
+                                        step3: false
+                                    }
+                                );
+                            PressedFill: =Color.Transparent
+                            Size: =14
+                            Text: =""
+                            Width: =190
+                            X: =1176
+                            ZIndex: =4
+
+                        rct_ReferrerInformation As rectangle:
+                            Height: =3
+                            Visible: =varReferralform1.step2
+                            Width: =200
+                            X: =270
+                            Y: =45
+                            ZIndex: =5
+
+                        icon_ReferrerInformation As icon.Person:
+                            Height: =25
+                            Icon: =Icon.Person
+                            Width: =25
+                            X: =263
+                            Y: =18
+                            ZIndex: =6
+
+                        lbl_ReferrerInformation As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Size: =14
+                            Text: ="Referrer Information"
+                            Width: =194
+                            X: =288
+                            Y: =12
+                            ZIndex: =7
+
+                        btn_ReferrerInformation As button:
+                            BorderThickness: =0
+                            Fill: =Color.Transparent
+                            Font: =Font.'Segoe UI'
+                            Height: =45
+                            HoverFill: =Color.Transparent
+                            OnSelect: |-
+                                =Set(
+                                    varReferralform1,
+                                    {
+                                        step1: false,
+                                        step2: true,
+                                        step3: false
+                                    }
+                                );
+                            PressedFill: =Color.Transparent
+                            Size: =14
+                            Text: =""
+                            Width: =200
+                            X: =261
+                            Y: =12
+                            ZIndex: =8
+
+                        rct_ReferrerInformation_1 As rectangle:
+                            Height: =3
+                            Visible: =varReferralform1.step3
+                            Width: =200
+                            X: =521
+                            Y: =45
+                            ZIndex: =9
+
+                        icon_CareprogramInformation As icon.Person:
+                            Height: =25
+                            Icon: =Icon.Person
+                            Width: =25
+                            X: =514
+                            Y: =18
+                            ZIndex: =10
+
+                        lbl_CareprogramInformation As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Size: =14
+                            Text: ="Care Program Information"
+                            Width: =246
+                            X: =531
+                            Y: =12
+                            ZIndex: =11
+
+                        btn_CareprogramInformation As button:
+                            BorderThickness: =0
+                            Fill: =Color.Transparent
+                            Font: =Font.'Segoe UI'
+                            Height: =45
+                            HoverFill: =Color.Transparent
+                            OnSelect: |-
+                                =Set(
+                                    varReferralform1,
+                                    {
+                                        step1: false,
+                                        step2: false,
+                                        step3: true
+                                    }
+                                );
+                            PressedFill: =Color.Transparent
+                            Size: =14
+                            Text: =""
+                            Width: =250
+                            X: =512
+                            Y: =12
+                            ZIndex: =12
 
                     "'Client Email_DataCard1' As typedDataCard.textualEditCard":
                         BorderStyle: =BorderStyle.Solid
@@ -163,9 +298,10 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Email")
                         Required: =true
                         Update: =DataCardValue3.Text
+                        Visible: =varReferralform1.step1
                         Width: =Parent.Width/2
                         X: =1
-                        Y: =1
+                        Y: =2
                         ZIndex: =1
 
                         DataCardKey3 As label:
@@ -223,33 +359,6 @@
                             Y: =DataCardKey3.Y
                             ZIndex: =4
 
-                    DataCard9 As typedDataCard.blankCard:
-                        BorderStyle: =BorderStyle.Solid
-                        DisplayMode: =DisplayMode.Edit
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =81
-                        Width: =1212
-                        X: =0
-                        Y: =3
-                        ZIndex: =1
-
-                        TextInput3 As text:
-                            BorderColor: =RGBA(246, 88, 16, 1)
-                            Color: =RGBA(255, 255, 255, 1)
-                            Default: ="Referrer Information"
-                            Fill: =RGBA(246, 88, 16, 1)
-                            FontWeight: =FontWeight.Bold
-                            Height: =31
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            Size: =15
-                            Width: =298
-                            X: =30
-                            Y: =24
-                            ZIndex: =1
-
                     DataCard10 As typedDataCard.blankCard:
                         BorderStyle: =BorderStyle.Solid
                         DisplayMode: =DisplayMode.Edit
@@ -288,15 +397,18 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Title")
                         Required: =true
                         Update: =DataCardValue1.Text
+                        Visible: =varReferralform1.step1
                         Width: =Parent.Width/2
                         X: =0
-                        Y: =0
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey1 As label:
                             Color: =Color.Black
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =33
+                            Size: =14
                             Text: ="Client Name"
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -305,9 +417,11 @@
 
                         DataCardValue1 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
                             Default: =If(varManualUpload=true,varCurrentFormProcessorItem.Name,Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -357,16 +471,19 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Cli_MobileNumber")
                         Required: =true
                         Update: =DataCardValue2.Text
+                        Visible: =varReferralform1.step1
                         Width: =Parent.Width/2
-                        X: =0
-                        Y: =0
+                        X: =1
+                        Y: =1
                         ZIndex: =2
 
                         DataCardKey2 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -375,9 +492,11 @@
 
                         DataCardValue2 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
                             Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Mobile Number',Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -426,9 +545,10 @@
                         Height: =50
                         Required: =true
                         Update: =DataCardValue4.SelectedDate
+                        Visible: =varReferralform1.step1
                         Width: =Parent.Width/2
                         X: =0
-                        Y: =1
+                        Y: =2
                         ZIndex: =2
 
                         DataCardKey4 As label:
@@ -494,9 +614,10 @@
                         Height: =50
                         Required: =true
                         Update: =DataCardValue5.Selected
-                        Width: =606
-                        X: =1
-                        Y: =2
+                        Visible: =varReferralform1.step1
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =3
                         ZIndex: =2
 
                         DataCardKey5 As label:
@@ -567,9 +688,10 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_Name")
                         Required: =true
                         Update: =DataCardValue6.Text
+                        Visible: =varReferralform1.step2
                         Width: =Parent.Width/2
-                        X: =0
-                        Y: =4
+                        X: =1
+                        Y: =3
                         ZIndex: =2
 
                         DataCardKey6 As label:
@@ -638,8 +760,9 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_MobileNumber")
                         Required: =true
                         Update: =DataCardValue7.Text
+                        Visible: =varReferralform1.step2
                         Width: =Parent.Width/2
-                        X: =1
+                        X: =0
                         Y: =4
                         ZIndex: =2
 
@@ -709,9 +832,10 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_EmailID")
                         Required: =true
                         Update: =DataCardValue8.Text
+                        Visible: =varReferralform1.step2
                         Width: =Parent.Width/2
-                        X: =0
-                        Y: =5
+                        X: =1
+                        Y: =4
                         ZIndex: =2
 
                         DataCardKey8 As label:
@@ -740,7 +864,7 @@
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                            Y: =49
                             ZIndex: =2
 
                         ErrorMessage8 As label:
@@ -780,8 +904,9 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_RelationtoClient")
                         Required: =true
                         Update: =DataCardValue9.Text
+                        Visible: =varReferralform1.step2
                         Width: =Parent.Width/2
-                        X: =1
+                        X: =0
                         Y: =5
                         ZIndex: =2
 
@@ -1332,7 +1457,7 @@
             Visible: =varForm2 
             Width: =1366
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =5
 
             Container2 As groupContainer.manualLayoutContainer:
@@ -1775,9 +1900,8 @@
             Rectangle7_4 As rectangle:
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =60
-                Width: =1205
-                X: =87
-                Y: =21
+                Width: =Parent.Width
+                Y: =18
                 ZIndex: =1
 
             Button2_1 As button:

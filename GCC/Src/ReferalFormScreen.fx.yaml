@@ -509,7 +509,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =221
+                            X: =224
                             Y: =DataCardKey2.Y
                             ZIndex: =4
 
@@ -1294,8 +1294,10 @@
                         DataCardKey15 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Visible: =false
                             Width: =Parent.Width - 60
@@ -1308,6 +1310,7 @@
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                             Default: =Parent.Default
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             Tooltip: =Parent.DisplayName
                             Visible: =false
                             X: =30

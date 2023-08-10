@@ -299,6 +299,13 @@ dashBoardScreen As screen:
         Y: =82
         ZIndex: =20
 
+    rect_Dashboard As rectangle:
+        Fill: =RGBA(0, 0, 0,0.8)
+        Height: =768
+        Visible: =varHistoryPopUp
+        Width: =1366
+        ZIndex: =27
+
     grpManualUploadPopup_1 As group:
         Height: =5
         Width: =5
@@ -369,13 +376,6 @@ dashBoardScreen As screen:
             X: =879
             Y: =389
             ZIndex: =26
-
-    rect_Dashboard As rectangle:
-        Fill: =RGBA(0, 0, 0,0.8)
-        Height: =768
-        Visible: =varHistoryPopUp
-        Width: =1366
-        ZIndex: =27
 
     grpHistoryPopup As group:
         Height: =5

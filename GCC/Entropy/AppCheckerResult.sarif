@@ -3618,6 +3618,18 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -3789,19 +3801,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Icon12.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.icn_Close.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Icon12.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.icn_Close.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Icon12"
+                "type": "dashBoardScreen.icn_Close"
               }
             }
           ],
@@ -3819,19 +3831,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Icon12.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.icn_Close.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Icon12.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.icn_Close.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Icon12"
+                "type": "dashBoardScreen.icn_Close"
               }
             }
           ],
@@ -3909,19 +3921,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Gallery1_1"
+                "type": "dashBoardScreen.glry_Dasboard"
               }
             }
           ],
@@ -3939,19 +3951,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Gallery1_1"
+                "type": "dashBoardScreen.glry_Dasboard"
               }
             }
           ],
@@ -3969,19 +3981,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.NextArrow3_1.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.icn_NextArrow.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.NextArrow3_1.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.icn_NextArrow.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Gallery1_1.NextArrow3_1"
+                "type": "dashBoardScreen.glry_Dasboard.icn_NextArrow"
               }
             }
           ],
@@ -3999,19 +4011,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.Icon9.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.icn_View.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.Icon9.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.icn_View.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Gallery1_1.Icon9"
+                "type": "dashBoardScreen.glry_Dasboard.icn_View"
               }
             }
           ],
@@ -4029,19 +4041,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.Icon9.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.icn_View.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery1_1.Icon9.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.glry_Dasboard.icn_View.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Gallery1_1.Icon9"
+                "type": "dashBoardScreen.glry_Dasboard.icn_View"
               }
             }
           ],
@@ -4059,19 +4071,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "dashBoardScreen.glry_History.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "dashBoardScreen.glry_History.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Gallery3"
+                "type": "dashBoardScreen.glry_History"
               }
             }
           ],
@@ -4089,19 +4101,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery3.TabIndex"
+                  "fullyQualifiedName": "dashBoardScreen.glry_History.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "dashBoardScreen.Gallery3.TabIndex",
+                  "fullyQualifiedName": "dashBoardScreen.glry_History.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "dashBoardScreen",
-                "type": "dashBoardScreen.Gallery3"
+                "type": "dashBoardScreen.glry_History"
               }
             }
           ],

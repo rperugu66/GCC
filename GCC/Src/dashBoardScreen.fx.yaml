@@ -222,7 +222,7 @@ dashBoardScreen As screen:
         Y: =40
         ZIndex: =14
 
-        Rectangle9_1 As rectangle:
+        rect_NewformBackground As rectangle:
             Fill: =RGBA(0,0,0,0.7)
             Height: =768
             OnSelect: =false                                   
@@ -230,7 +230,7 @@ dashBoardScreen As screen:
             Width: =1366
             ZIndex: =11
 
-        Rectangle10_1 As rectangle:
+        rect_Newform As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =312
             Visible: =varNewform
@@ -239,7 +239,7 @@ dashBoardScreen As screen:
             Y: =171
             ZIndex: =12
 
-        Label6_1 As label:
+        lbl_ChooseOption As label:
             Align: =Align.Center
             BorderColor: =Color.DarkOrange
             BorderThickness: =2
@@ -254,14 +254,14 @@ dashBoardScreen As screen:
             Y: =259
             ZIndex: =13
 
-        Radio1_1 As radio:
+        rdo_ManualOrDigital As radio:
             BorderColor: =Color.White
             Height: =66
             Items: =["Upload manual form","Digital Referral form"]
             Layout: =Layout.Horizontal
             OnSelect: |-
                 =If(
-                    Radio1_1.Selected.Value = "Upload manual form",
+                    rdo_ManualOrDigital.Selected.Value = "Upload manual form",
                     Set(
                         varNewform,
                         false
@@ -278,7 +278,7 @@ dashBoardScreen As screen:
             Y: =324
             ZIndex: =14
 
-        Icon3_1 As icon.Cancel:
+        icn_NewformCancel As icon.Cancel:
             Color: =RGBA(255, 0, 0, 1)
             Height: =40
             Icon: =Icon.Cancel
@@ -289,7 +289,7 @@ dashBoardScreen As screen:
             Y: =184
             ZIndex: =15
 
-    Label8_1 As label:
+    lbl_AssistantManagerView As label:
         FontWeight: =FontWeight.Bold
         Height: =43
         Size: =18
@@ -299,6 +299,13 @@ dashBoardScreen As screen:
         Y: =82
         ZIndex: =20
 
+    rect_Dashboard As rectangle:
+        Fill: =RGBA(0, 0, 0,0.8)
+        Height: =768
+        Visible: =varHistoryPopUp
+        Width: =1366
+        ZIndex: =27
+
     grpManualUploadPopup_1 As group:
         Height: =5
         Width: =5
@@ -306,14 +313,14 @@ dashBoardScreen As screen:
         Y: =40
         ZIndex: =27
 
-        Rectangle5_1 As rectangle:
+        rect_ManualUploadBackground As rectangle:
             Fill: =RGBA(0, 0, 0, 0.6)
             Height: =768
             Visible: =varManualUpload
             Width: =1366
             ZIndex: =21
 
-        Rectangle6_1 As rectangle:
+        rect_ManualUpload As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =613
             Visible: =varManualUpload
@@ -322,7 +329,7 @@ dashBoardScreen As screen:
             Y: =65
             ZIndex: =22
 
-        FormProcessor1_1 As FormProcessor:
+        fp_ManualUpload As FormProcessor:
             BorderColor: =RGBA(210, 208, 206, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -339,7 +346,7 @@ dashBoardScreen As screen:
             Y: =108
             ZIndex: =23
 
-        Icon4_1 As icon.Cancel:
+        icn_ManualUploadCancel As icon.Cancel:
             Color: =RGBA(255, 0, 0, 1)
             Height: =50
             Icon: =Icon.Cancel
@@ -350,7 +357,7 @@ dashBoardScreen As screen:
             Y: =88
             ZIndex: =24
 
-        Icon5_1 As icon.NextArrow:
+        icn_ManualUploadNext As icon.NextArrow:
             Color: =Color.Orange
             Icon: =Icon.NextArrow
             Visible: =varManualUpload
@@ -358,7 +365,7 @@ dashBoardScreen As screen:
             Y: =307
             ZIndex: =25
 
-        Label9_1 As label:
+        lbl_Proceed As label:
             Align: =Align.Center
             BorderColor: =Color.Orange
             BorderThickness: =2
@@ -369,13 +376,6 @@ dashBoardScreen As screen:
             X: =879
             Y: =389
             ZIndex: =26
-
-    rect_Dashboard As rectangle:
-        Fill: =RGBA(0, 0, 0,0.8)
-        Height: =768
-        Visible: =varHistoryPopUp
-        Width: =1366
-        ZIndex: =27
 
     grpHistoryPopup As group:
         Height: =5

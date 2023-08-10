@@ -1,7 +1,7 @@
 "SuccessScreen As screen.'tabletLayout_Success_ver3.0'":
 
     iconCircle1 As circle.Circle:
-        Fill: =Color.Green
+        Fill: =RGBA(54, 176, 75, 1)
         X: =Parent.Width/2 - Self.Width/2
         Y: =(Parent.Height/2 - Self.Height/2) * .7
         ZIndex: =1
@@ -21,12 +21,12 @@
     LblSuccessMsg1 As label:
         Align: =Align.Center
         AutoHeight: =true
-        Height: =iconCircle1.Height
-        Size: =20
+        Font: =Font.'Segoe UI'
+        Height: =27
         Text: =" successfully completed"
-        Width: =Parent.Width * 0.75
-        X: =Parent.Width/2 - Self.Width/2
-        Y: =iconCheck1.Y + iconCheck1.Height + 100
+        Width: =1024
+        X: =170
+        Y: =430
         ZIndex: =3
 
     Rectangle1_4 As rectangle:
@@ -74,14 +74,15 @@
         ZIndex: =8
 
     Label7 As label:
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =55
-        Size: =15
+        Height: =61
+        Size: =14
         Text: |-
-            =" Your Case ID is:"
-        Width: =168
-        X: =523
-        Y: =531
+            =" Your Case ID is :"
+        Width: =167
+        X: =532
+        Y: =467
         ZIndex: =9
 
     Icon7 As icon.Cancel:
@@ -106,13 +107,14 @@
 
     Label11 As label:
         Color: =RGBA(39, 113, 194, 1)
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =57
+        Height: =63
         OnSelect: =If(varLoginUser.Role="Social Care Team",Navigate(socialCareTeamdashBoard),Navigate(dashBoardScreen));
-        Size: =16
+        Size: =14
         Text: =If(varLoginUser.Role="Social Care Team","GCCDC-"&randBetween, varCurrentItem.'Referral Number')
         Underline: =true
-        X: =691
-        Y: =531
+        X: =686
+        Y: =467
         ZIndex: =11
 

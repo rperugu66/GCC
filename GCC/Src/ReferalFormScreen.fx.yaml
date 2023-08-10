@@ -251,8 +251,8 @@
                             Height: =25
                             Icon: =Icon.Person
                             Width: =25
-                            X: =514
-                            Y: =18
+                            X: =506
+                            Y: =20
                             ZIndex: =10
 
                         lbl_CareprogramInformation As label:

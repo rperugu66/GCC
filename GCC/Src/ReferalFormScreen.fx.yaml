@@ -1222,9 +1222,11 @@
 
                         DataCardValue14 As datepicker:
                             BorderColor: =If(IsBlank(Parent.Error), Color.Black, Color.Red)
+                            BorderThickness: =1
                             DefaultDate: =If(varManualUpload=true,varCurrentFormProcessorItem.'Date of Referral',Parent.Default)
                             DisplayMode: =Parent.DisplayMode
                             EndYear: =Year(Today())+100
+                            Font: =Font.'Segoe UI'
                             IsEditable: =true
                             OnChange: =
                             OnSelect: |
@@ -1239,6 +1241,7 @@
                                 )
                             PaddingBottom: =0
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            Size: =13
                             StartYear: =1899
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60

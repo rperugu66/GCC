@@ -32,7 +32,7 @@ Login As screen:
 
     btn_Submit As button:
         BorderThickness: =0
-        Fill: =RGBA(246, 88, 16, 1)
+        Fill: =RGBA(53, 109, 166, 1)
         Font: =Font.'Segoe UI'
         HoverFill: =RGBA(246, 88, 16, 1)
         OnSelect: |-

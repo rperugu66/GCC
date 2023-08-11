@@ -276,7 +276,7 @@ socialCareTeamdashBoard As screen:
         RadiusTopLeft: =56
         RadiusTopRight: =56
         Width: =50
-        X: =1048
+        X: =1008
         Y: =17
         ZIndex: =9
 
@@ -288,7 +288,7 @@ socialCareTeamdashBoard As screen:
         Size: =16
         Text: =User().FullName
         Width: =256
-        X: =1098
+        X: =1058
         Y: =10
         ZIndex: =10
 
@@ -498,6 +498,15 @@ socialCareTeamdashBoard As screen:
             X: =879
             Y: =389
             ZIndex: =26
+
+    Icon9 As icon.Settings:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.Settings
+        Width: =40
+        X: =1300
+        Y: =20
+        ZIndex: =36
 
     Group3 As group:
         Height: =5

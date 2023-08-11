@@ -151,11 +151,11 @@ Login As screen:
 
     icn_LoginView As icon.View:
         Color: =RGBA(0, 0, 0, 1)
-        Height: =40
+        Height: =25
         Icon: =Icon.View
         OnSelect: =Set(varIsPasswordMode, !varIsPasswordMode)
-        Width: =40
-        X: =742
-        Y: =410
+        Width: =25
+        X: =767
+        Y: =417
         ZIndex: =17
 

@@ -1,29 +1,5 @@
 Login As screen:
 
-    rect_Header As rectangle:
-        Fill: =RGBA(53, 109, 166, 1)
-        Height: =56
-        Width: =1366
-        ZIndex: =1
-
-    img_Logo As image:
-        Height: =56
-        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
-        Width: =250
-        X: =17
-        ZIndex: =2
-
-    lbl_AppHeader As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =56
-        Size: =26
-        Text: ="GCC Adult Care Center"
-        Width: =493
-        X: =390
-        ZIndex: =3
-
     rect_LoginBackground As rectangle:
         Fill: =RGBA(128, 128, 128, 0.1)
         Height: =513
@@ -42,7 +18,9 @@ Login As screen:
 
     txt_Password As text:
         BorderColor: =Color.Black
+        BorderThickness: =1
         Default: =""
+        Font: =Font.'Segoe UI'
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -55,6 +33,7 @@ Login As screen:
     btn_Submit As button:
         BorderThickness: =0
         Fill: =RGBA(246, 88, 16, 1)
+        Font: =Font.'Segoe UI'
         HoverFill: =RGBA(246, 88, 16, 1)
         OnSelect: |-
             =Set(
@@ -75,6 +54,7 @@ Login As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
+        Size: =14
         Text: ="Sign In"
         X: =553
         Y: =540
@@ -82,6 +62,7 @@ Login As screen:
 
     lbl_LoginHeader As label:
         Align: =Align.Center
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =43
         Size: =22
@@ -92,8 +73,10 @@ Login As screen:
         ZIndex: =9
 
     lbl_UserName As label:
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =41
+        Size: =14
         Text: ="Username"
         Width: =320
         X: =472
@@ -101,8 +84,10 @@ Login As screen:
         ZIndex: =10
 
     lbl_Password As label:
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =41
+        Size: =14
         Text: ="Password"
         Width: =320
         X: =472
@@ -112,6 +97,7 @@ Login As screen:
     lbl_ForgotPassword As label:
         Align: =Align.Right
         Color: =RGBA(56, 96, 178, 1)
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =43
         Size: =14
@@ -123,7 +109,9 @@ Login As screen:
 
     text_UserName As text:
         BorderColor: =Color.Black
+        BorderThickness: =1
         Default: =User().FullName
+        Font: =Font.'Segoe UI'
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -132,4 +120,31 @@ Login As screen:
         X: =472
         Y: =303
         ZIndex: =13
+
+    rct_GccHeader As rectangle:
+        Fill: =RGBA(53, 109, 166, 1)
+        Height: =85
+        Width: =1366
+        ZIndex: =14
+
+    Img_GCCLogo As image:
+        Height: =65
+        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+        Width: =250
+        X: =17
+        Y: =10
+        ZIndex: =15
+
+    lbl_GccAdultCare As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =65
+        Size: =26
+        Text: ="GCC Adult Care Center"
+        Width: =493
+        X: =390
+        Y: =10
+        ZIndex: =16
 

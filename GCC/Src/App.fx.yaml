@@ -1,5 +1,6 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: =Set(varIsPasswordMode, true)
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

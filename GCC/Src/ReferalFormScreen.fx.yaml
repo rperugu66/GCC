@@ -4,7 +4,7 @@
     ReferalFormCanvas As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(237, 237, 237, 1)
-        Height: =768
+        Height: =761
         Width: =Parent.Width
         Y: =
         ZIndex: =3
@@ -438,6 +438,82 @@
                             Y: =DataCardKey1.Y
                             ZIndex: =4
 
+                    "'Referrer Mobile Number_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Ref_MobileNumber"
+                        Default: =
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_MobileNumber")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_MobileNumber")
+                        Required: =true
+                        Update: =DataCardValue7.Text
+                        Visible: =varReferralform1.step2
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey7 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Size: =14
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue7 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer''s Mobile Number',Parent.Default)
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage7 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue7.Y + DataCardValue7.Height
+                            ZIndex: =3
+
+                        StarVisible7 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey7.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =241
+                            Y: =10
+                            ZIndex: =4
+
                     "'Client Mobile Number_DataCard1' As typedDataCard.textualEditCard":
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="Cli_MobileNumber"
@@ -511,157 +587,6 @@
                             Wrap: =false
                             X: =224
                             Y: =DataCardKey2.Y
-                            ZIndex: =4
-
-                    "'Client DOB_DataCard1' As typedDataCard.dateEditCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="DOB"
-                        Default: =ThisItem.'Client DOB'
-                        DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"DOB")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =true
-                        Update: =DataCardValue4.SelectedDate
-                        Visible: =varReferralform1.step1
-                        Width: =Parent.Width/2
-                        X: =0
-                        Y: =2
-                        ZIndex: =2
-
-                        DataCardKey4 As label:
-                            AutoHeight: =true
-                            Color: =RGBA(0, 0, 0, 1)
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =34
-                            Size: =14
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue4 As datepicker:
-                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
-                            BorderThickness: =1
-                            DefaultDate: =If(varManualUpload=true,varCurrentFormProcessorItem.'Date of Birth',Parent.Default)
-                            DisplayMode: =Parent.DisplayMode
-                            EndYear: =Year(Today())+100
-                            Font: =Font.'Segoe UI'
-                            IsEditable: =true
-                            PaddingBottom: =0
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            Size: =13
-                            StartYear: =1899
-                            Tooltip: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey4.Y + DataCardKey4.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage4 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue4.Y + DataCardValue4.Height
-                            ZIndex: =3
-
-                        StarVisible4 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey4.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            X: =127
-                            Y: =DataCardKey4.Y
-                            ZIndex: =4
-
-                    "'Client Gender_DataCard1' As typedDataCard.comboBoxEditCard":
-                        BorderStyle: =BorderStyle.Solid
-                        DataField: ="Gender"
-                        Default: =ThisItem.'Client Gender'
-                        DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Gender")
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =50
-                        Required: =true
-                        Update: =DataCardValue5.Selected
-                        Visible: =varReferralform1.step1
-                        Width: =Parent.Width/2
-                        X: =0
-                        Y: =3
-                        ZIndex: =2
-
-                        DataCardKey5 As label:
-                            AutoHeight: =true
-                            Color: =RGBA(0, 0, 0, 1)
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =34
-                            Size: =14
-                            Text: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            Wrap: =false
-                            X: =30
-                            Y: =10
-                            ZIndex: =1
-
-                        DataCardValue5 As combobox:
-                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
-                            BorderThickness: =1
-                            Default: |-
-                                =If(varManualUpload=true,{Value:varCurrentFormProcessorItem.Gender},Parent.Default)
-                            DefaultSelectedItems: =Parent.Default
-                            DisplayFields: =["Value"]
-                            DisplayMode: =Parent.DisplayMode
-                            Font: =Font.'Segoe UI'
-                            IsSearchable: =false
-                            Items: =Choices([@'Referral form1'].'Client Gender')
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            SearchFields: =["Value"]
-                            SearchItems: =[]
-                            SelectMultiple: =false
-                            Tooltip: =Parent.DisplayName
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardKey5.Y + DataCardKey5.Height + 5
-                            ZIndex: =2
-
-                        ErrorMessage5 As label:
-                            AutoHeight: =true
-                            Height: =10
-                            Live: =Live.Assertive
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Text: =Parent.Error
-                            Visible: =Parent.DisplayMode=DisplayMode.Edit
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =DataCardValue5.Y + DataCardValue5.Height
-                            ZIndex: =3
-
-                        StarVisible5 As label:
-                            Align: =Align.Center
-                            Height: =DataCardKey5.Height
-                            Text: ="*"
-                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                            Width: =30
-                            Wrap: =false
-                            X: =151
-                            Y: =10
                             ZIndex: =4
 
                     "'Referrer Name_DataCard1' As typedDataCard.textualEditCard":
@@ -740,24 +665,23 @@
                             Y: =10
                             ZIndex: =4
 
-                    "'Referrer Mobile Number_DataCard1' As typedDataCard.textualEditCard":
+                    "'Client DOB_DataCard1' As typedDataCard.dateEditCard":
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="Ref_MobileNumber"
-                        Default: =
+                        DataField: ="DOB"
+                        Default: =ThisItem.'Client DOB'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_MobileNumber")
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"DOB")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_MobileNumber")
                         Required: =true
-                        Update: =DataCardValue7.Text
-                        Visible: =varReferralform1.step2
+                        Update: =DataCardValue4.SelectedDate
+                        Visible: =varReferralform1.step1
                         Width: =Parent.Width/2
                         X: =0
-                        Y: =1
+                        Y: =2
                         ZIndex: =2
 
-                        DataCardKey7 As label:
+                        DataCardKey4 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
                             Font: =Font.'Segoe UI'
@@ -771,10 +695,85 @@
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue7 As text:
+                        DataCardValue4 As datepicker:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
                             BorderThickness: =1
-                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Referrer''s Mobile Number',Parent.Default)
+                            DefaultDate: =If(varManualUpload=true,varCurrentFormProcessorItem.'Date of Birth',Parent.Default)
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            Font: =Font.'Segoe UI'
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            Size: =13
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage4 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue4.Y + DataCardValue4.Height
+                            ZIndex: =3
+
+                        StarVisible4 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey4.Height
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            X: =127
+                            Y: =DataCardKey4.Y
+                            ZIndex: =4
+
+                    "'Referrer Relation to Client_DataCard1' As typedDataCard.textualEditCard":
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="Ref_RelationtoClient"
+                        Default: =ThisItem.'Referrer Relation to Client'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_RelationtoClient")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_RelationtoClient")
+                        Required: =true
+                        Update: =DataCardValue9.Text
+                        Visible: =varReferralform1.step2
+                        Width: =Parent.Width/2
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey9 As label:
+                            AutoHeight: =true
+                            Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            Size: =14
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue9 As text:
+                            BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
+                            BorderThickness: =1
+                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Relation to Client',Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Font: =Font.'Segoe UI'
@@ -787,10 +786,10 @@
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                            Y: =DataCardKey9.Y + DataCardKey9.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage7 As label:
+                        ErrorMessage9 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -802,17 +801,17 @@
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue7.Y + DataCardValue7.Height
+                            Y: =DataCardValue9.Y + DataCardValue9.Height
                             ZIndex: =3
 
-                        StarVisible7 As label:
+                        StarVisible9 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey7.Height
+                            Height: =DataCardKey9.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =241
+                            X: =260
                             Y: =10
                             ZIndex: =4
 
@@ -892,24 +891,23 @@
                             Y: =DataCardKey8.Y
                             ZIndex: =4
 
-                    "'Referrer Relation to Client_DataCard1' As typedDataCard.textualEditCard":
+                    "'Client Gender_DataCard1' As typedDataCard.comboBoxEditCard":
                         BorderStyle: =BorderStyle.Solid
-                        DataField: ="Ref_RelationtoClient"
-                        Default: =ThisItem.'Referrer Relation to Client'
+                        DataField: ="Gender"
+                        Default: =ThisItem.'Client Gender'
                         DisplayMode: =Parent.DisplayMode
-                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Ref_RelationtoClient")
+                        DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Gender")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "Ref_RelationtoClient")
                         Required: =true
-                        Update: =DataCardValue9.Text
-                        Visible: =varReferralform1.step2
+                        Update: =DataCardValue5.Selected
+                        Visible: =varReferralform1.step1
                         Width: =Parent.Width/2
                         X: =0
-                        Y: =2
+                        Y: =3
                         ZIndex: =2
 
-                        DataCardKey9 As label:
+                        DataCardKey5 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
                             Font: =Font.'Segoe UI'
@@ -923,26 +921,28 @@
                             Y: =10
                             ZIndex: =1
 
-                        DataCardValue9 As text:
+                        DataCardValue5 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
                             BorderThickness: =1
-                            Default: =If(varManualUpload=true,varCurrentFormProcessorItem.'Relation to Client',Parent.Default)
-                            DelayOutput: =true
+                            Default: |-
+                                =If(varManualUpload=true,{Value:varCurrentFormProcessorItem.Gender},Parent.Default)
+                            DefaultSelectedItems: =Parent.Default
+                            DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
                             Font: =Font.'Segoe UI'
-                            MaxLength: =Parent.MaxLength
-                            PaddingLeft: =5
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
+                            IsSearchable: =false
+                            Items: =Choices([@'Referral form1'].'Client Gender')
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectMultiple: =false
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                            Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                             ZIndex: =2
 
-                        ErrorMessage9 As label:
+                        ErrorMessage5 As label:
                             AutoHeight: =true
                             Height: =10
                             Live: =Live.Assertive
@@ -954,17 +954,17 @@
                             Visible: =Parent.DisplayMode=DisplayMode.Edit
                             Width: =Parent.Width - 60
                             X: =30
-                            Y: =DataCardValue9.Y + DataCardValue9.Height
+                            Y: =DataCardValue5.Y + DataCardValue5.Height
                             ZIndex: =3
 
-                        StarVisible9 As label:
+                        StarVisible5 As label:
                             Align: =Align.Center
-                            Height: =DataCardKey9.Height
+                            Height: =DataCardKey5.Height
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =260
+                            X: =151
                             Y: =10
                             ZIndex: =4
 
@@ -1485,7 +1485,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =538
+            Height: =477
             Visible: =varForm2 
             Width: =1366
             X: =0
@@ -1493,7 +1493,7 @@
             ZIndex: =5
 
             Container2 As groupContainer.manualLayoutContainer:
-                Height: =549
+                Height: =477
                 Width: =Parent.Width
                 ZIndex: =1
 
@@ -1502,7 +1502,7 @@
                     DefaultMode: =If(varCurrentItem.Status="Open",FormMode.View,FormMode.Edit)
                     Fill: |
                         =Color.White
-                    Height: =549
+                    Height: =477
                     Item: =varCurrentItem
                     NumberOfColumns: =2
                     Width: =Parent.Width
@@ -2133,14 +2133,13 @@
 
             Rectangle13 As rectangle:
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =60
-                Width: =1205
-                X: =76
-                Y: =27
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
             Button10 As button:
-                Fill: =RGBA(246, 88, 16, 1)
+                Fill: =RGBA(53, 109, 166, 1)
+                Font: =Font.'Segoe UI'
                 OnSelect: |-
                     =Patch(
                         'Referral form1',
@@ -2157,9 +2156,10 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Confirm Visit"
-                X: =576
-                Y: =40
+                X: =567
+                Y: =30
                 ZIndex: =2
 
         DataCard15 As dataCard.blankCard:
@@ -2167,7 +2167,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =157
+            Height: =220
             Visible: =varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Visited"&&varForm2=true
             Width: =1366
             X: =0
@@ -2175,10 +2175,8 @@
             ZIndex: =12
 
             Container4 As groupContainer.manualLayoutContainer:
-                Height: =220
-                Width: =1210
-                X: =74
-                Y: =18
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
                 Form8 As form:
@@ -2187,7 +2185,7 @@
                     Fill: =Color.White
                     Height: =220
                     NumberOfColumns: =2
-                    Width: =1208
+                    Width: =Parent.Width
                     X: =2
                     ZIndex: =1
 
@@ -2209,8 +2207,10 @@
                         DataCardKey34 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2222,6 +2222,7 @@
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
                             Default: =Parent.Default
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             Tooltip: =Parent.DisplayName
                             X: =30
                             Y: =DataCardKey34.Y + DataCardKey34.Height + 5
@@ -2270,8 +2271,10 @@
                         DataCardKey35 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2281,12 +2284,15 @@
 
                         DataCardValue35 As datepicker:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            BorderThickness: =1
                             DefaultDate: =Parent.Default
                             DisplayMode: =Parent.DisplayMode
                             EndYear: =Year(Today())+100
+                            Font: =Font.'Segoe UI'
                             IsEditable: =true
                             PaddingBottom: =0
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            Size: =13
                             StartYear: =1899
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
@@ -2338,8 +2344,10 @@
                         DataCardKey36 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2349,9 +2357,11 @@
 
                         DataCardValue36 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -2408,8 +2418,10 @@
                         DataCardKey37 As label:
                             AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Height: =34
+                            Size: =14
                             Text: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             Wrap: =false
@@ -2419,9 +2431,11 @@
 
                         DataCardValue37 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
+                            BorderThickness: =1
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            Font: =Font.'Segoe UI'
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -2473,14 +2487,13 @@
 
             Rectangle12 As rectangle:
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =60
-                Width: =1205
-                X: =76
-                Y: =27
+                Height: =Parent.Height
+                Width: =Parent.Width
                 ZIndex: =1
 
             Button7 As button:
-                Fill: =RGBA(246, 88, 16, 1)
+                Fill: =RGBA(53, 109, 166, 1)
+                Font: =Font.'Segoe UI'
                 OnSelect: |
                     =Patch(
                         'Referral form1',
@@ -2497,19 +2510,20 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
+                Size: =14
                 Text: ="Submit"
-                X: =1053
-                Y: =39
+                X: =1070
+                Y: =30
                 ZIndex: =2
 
             Icon8 As icon.BackArrow:
-                Color: =RGBA(246, 88, 16, 1)
+                Color: =RGBA(53, 109, 166, 1)
                 Height: =40
                 Icon: =Icon.BackArrow
                 OnSelect: =Set(varForm1,true);Set(varForm2,false);
                 Width: =40
-                X: =128
-                Y: =37
+                X: =88
+                Y: =30
                 ZIndex: =3
 
         DataCard17 As dataCard.blankCard:

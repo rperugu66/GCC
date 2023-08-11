@@ -6476,36 +6476,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.MailtoDutyManagerforReferralform2"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.MailtoDutyManagerforReferralform2",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "MailtoDutyManagerforReferralform2",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.thearrivaloftheServiceUser"
                 }
               ],

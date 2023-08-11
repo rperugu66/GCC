@@ -1,0 +1,60 @@
+Cmt_GccHeader As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =85
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    rct_Header As rectangle:
+        Fill: =RGBA(53, 109, 166, 1)
+        Height: =85
+        Width: =1366
+        ZIndex: =1
+
+    Img_CompanyLgo As image:
+        Height: =65
+        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+        Width: =250
+        X: =17
+        Y: =10
+        ZIndex: =2
+
+    lbl_GCCAdultCare As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =65
+        Size: =26
+        Text: ="GCC Adult Care Center"
+        Width: =493
+        X: =390
+        Y: =10
+        ZIndex: =3
+
+    Img_UserLogo As image:
+        Height: =50
+        Image: =User().Image
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =56
+        RadiusBottomRight: =56
+        RadiusTopLeft: =56
+        RadiusTopRight: =56
+        Width: =50
+        X: =1048
+        Y: =17
+        ZIndex: =4
+
+    lbl_Username As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =65
+        Size: =16
+        Text: =User().FullName
+        Width: =256
+        X: =1098
+        Y: =10
+        ZIndex: =5
+

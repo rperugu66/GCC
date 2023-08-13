@@ -2529,5 +2529,6 @@
                 ZIndex: =13
 
     Cmt_GccHeader_3 As Cmt_GccHeader:
+        Height: =85
         ZIndex: =4
 

@@ -6326,19 +6326,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon9.AccessibleLabel"
+                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon_Settings.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon9.AccessibleLabel",
+                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon_Settings.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "socialCareTeamdashBoard",
-                "type": "socialCareTeamdashBoard.Icon9"
+                "type": "socialCareTeamdashBoard.Icon_Settings"
               }
             }
           ],
@@ -6356,19 +6356,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon9.TabIndex"
+                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon_Settings.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon9.TabIndex",
+                  "fullyQualifiedName": "socialCareTeamdashBoard.Icon_Settings.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "socialCareTeamdashBoard",
-                "type": "socialCareTeamdashBoard.Icon9"
+                "type": "socialCareTeamdashBoard.Icon_Settings"
               }
             }
           ],
@@ -6386,19 +6386,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Label1.FocusedBorderThickness"
+                  "fullyQualifiedName": "socialCareTeamdashBoard.lbl_Signout_Popup.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Label1.FocusedBorderThickness",
+                  "fullyQualifiedName": "socialCareTeamdashBoard.lbl_Signout_Popup.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "socialCareTeamdashBoard",
-                "type": "socialCareTeamdashBoard.Label1"
+                "type": "socialCareTeamdashBoard.lbl_Signout_Popup"
               }
             }
           ],
@@ -6416,19 +6416,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Label1.TabIndex"
+                  "fullyQualifiedName": "socialCareTeamdashBoard.lbl_Signout_Popup.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "socialCareTeamdashBoard.Label1.TabIndex",
+                  "fullyQualifiedName": "socialCareTeamdashBoard.lbl_Signout_Popup.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "socialCareTeamdashBoard",
-                "type": "socialCareTeamdashBoard.Label1"
+                "type": "socialCareTeamdashBoard.lbl_Signout_Popup"
               }
             }
           ],

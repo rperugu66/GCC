@@ -499,7 +499,7 @@ socialCareTeamdashBoard As screen:
             Y: =389
             ZIndex: =26
 
-    Icon9 As icon.Settings:
+    Icon_Settings As icon.Settings:
         Color: =RGBA(255, 255, 255, 1)
         Height: =30
         HoverColor: =Color.SkyBlue
@@ -631,7 +631,7 @@ socialCareTeamdashBoard As screen:
         Y: =85
         ZIndex: =37
 
-    Image1 As image:
+    Img_User_Popup As image:
         Height: =90
         Image: =User().Image
         RadiusBottomLeft: =50
@@ -644,7 +644,7 @@ socialCareTeamdashBoard As screen:
         Y: =116
         ZIndex: =38
 
-    Label1 As label:
+    lbl_Signout_Popup As label:
         Align: =Align.Center
         Font: =Font.'Segoe UI'
         Height: =33
@@ -658,7 +658,7 @@ socialCareTeamdashBoard As screen:
         Y: =85
         ZIndex: =39
 
-    Label2 As label:
+    lbl_FullName_Popup As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =30
@@ -670,7 +670,7 @@ socialCareTeamdashBoard As screen:
         Y: =120
         ZIndex: =40
 
-    Label3 As label:
+    lbl_Mail_Popup As label:
         Font: =Font.'Segoe UI'
         Height: =37
         Size: =12

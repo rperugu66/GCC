@@ -2038,7 +2038,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =220
+            Height: =197
             Visible: =varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Visited"&&varForm2=true
             Width: =1366
             X: =0
@@ -2046,7 +2046,7 @@
             ZIndex: =12
 
             Container4 As groupContainer.manualLayoutContainer:
-                Height: =Parent.Height
+                Height: =197
                 Width: =Parent.Width
                 ZIndex: =1
 
@@ -2054,10 +2054,9 @@
                     DataSource: ='Referral form1'
                     DefaultMode: =FormMode.New
                     Fill: =Color.White
-                    Height: =220
+                    Height: =197
                     NumberOfColumns: =2
                     Width: =Parent.Width
-                    X: =2
                     ZIndex: =1
 
                     "'Is user satisfied with the care facility?_DataCard1' As typedDataCard.toggleEditCard":
@@ -2070,7 +2069,7 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue34.Value
-                        Width: =604
+                        Width: =Parent.Width/2-120
                         X: =0
                         Y: =0
                         ZIndex: =2
@@ -2134,7 +2133,7 @@
                         Height: =50
                         Required: =false
                         Update: =DataCardValue35.SelectedDate
-                        Width: =604
+                        Width: =Parent.Width/2-120
                         X: =1
                         Y: =0
                         ZIndex: =2
@@ -2207,7 +2206,7 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "EmergencyMobileNumber")
                         Required: =false
                         Update: =DataCardValue36.Text
-                        Width: =604
+                        Width: =Parent.Width/2-120
                         X: =0
                         Y: =1
                         ZIndex: =2
@@ -2281,7 +2280,7 @@
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "EmergencyEmail")
                         Required: =false
                         Update: =DataCardValue37.Text
-                        Width: =604
+                        Width: =Parent.Width/2-120
                         X: =1
                         Y: =1
                         ZIndex: =2
@@ -2376,7 +2375,7 @@
                         Form8.Updates
                     );
                     Navigate(SuccessScreen);
-                    thearrivaloftheServiceUser.Run(varCurrentItem.Title)
+                    //thearrivaloftheServiceUser.Run(varCurrentItem.Title)
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
@@ -2393,7 +2392,7 @@
                 Icon: =Icon.BackArrow
                 OnSelect: =Set(varForm1,true);Set(varForm2,false);
                 Width: =40
-                X: =88
+                X: =36
                 Y: =30
                 ZIndex: =3
 

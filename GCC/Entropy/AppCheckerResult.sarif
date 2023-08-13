@@ -7040,36 +7040,6 @@
           },
           "ruleId": "app-NotOfflineConnectors",
           "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.thearrivaloftheServiceUser"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.thearrivaloftheServiceUser",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "thearrivaloftheServiceUser",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 8
         }
       ],
       "tool": {

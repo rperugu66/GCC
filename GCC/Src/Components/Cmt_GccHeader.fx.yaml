@@ -79,6 +79,7 @@ Cmt_GccHeader As CanvasComponent:
         ZIndex: =7
 
     Label1 As label:
+        Align: =Align.Center
         Font: =Font.'Segoe UI'
         Height: =33
         HoverColor: =Color.SkyBlue
@@ -107,7 +108,7 @@ Cmt_GccHeader As CanvasComponent:
     Label2 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =30
+        Height: =35
         Size: =14
         Text: =User().FullName
         Visible: =varShowSignout
@@ -124,6 +125,6 @@ Cmt_GccHeader As CanvasComponent:
         Visible: =varShowSignout
         Width: =238
         X: =1128
-        Y: =150
+        Y: =155
         ZIndex: =11
 

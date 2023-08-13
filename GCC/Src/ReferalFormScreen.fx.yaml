@@ -1398,7 +1398,7 @@
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             Tooltip: =Parent.DisplayName
-                            Width: =Parent.Width/2.4
+                            Width: =Parent.Width/2.5
                             X: =30
                             Y: =DataCardKey44.Y + DataCardKey44.Height + 5
                             ZIndex: =2
@@ -2018,8 +2018,8 @@
                 RadiusTopRight: =0
                 Size: =14
                 Text: ="Confirm Visit"
-                X: =567
-                Y: =30
+                X: =555
+                Y: =112
                 ZIndex: =2
 
             Icon12 As icon.BackArrow:

@@ -35,7 +35,7 @@ Login As screen:
         BorderThickness: =0
         Fill: =RGBA(53, 109, 166, 1)
         Font: =Font.'Segoe UI'
-        HoverFill: =RGBA(246, 88, 16, 1)
+        HoverFill: =Color.SkyBlue
         OnSelect: |-
             =Set(
                 varLoginUser,

@@ -501,11 +501,12 @@ socialCareTeamdashBoard As screen:
 
     Icon9 As icon.Settings:
         Color: =RGBA(255, 255, 255, 1)
-        Height: =40
+        Height: =30
         Icon: =Icon.Settings
-        Width: =40
+        OnSelect: =Set(varShowSignout,!varShowSignout)
+        Width: =30
         X: =1300
-        Y: =20
+        Y: =28
         ZIndex: =36
 
     Group3 As group:
@@ -618,4 +619,57 @@ socialCareTeamdashBoard As screen:
                 X: =78
                 Y: =6
                 ZIndex: =7
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =150
+        Visible: =varShowSignout
+        Width: =325
+        X: =1041
+        Y: =88
+        ZIndex: =37
+
+    Image1 As image:
+        Image: =User().Image
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =varShowSignout
+        X: =1042
+        Y: =109
+        ZIndex: =38
+
+    Label1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        Height: =33
+        Text: ="Sign out"
+        Visible: =varShowSignout
+        Width: =102
+        X: =1264
+        Y: =85
+        ZIndex: =39
+
+    Label2 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        Size: =14
+        Text: =User().FullName
+        Visible: =varShowSignout
+        Width: =216
+        X: =1150
+        Y: =118
+        ZIndex: =40
+
+    Label3 As label:
+        Font: =Font.'Segoe UI'
+        Height: =46
+        Text: =User().Email
+        Visible: =varShowSignout
+        Width: =216
+        X: =1150
+        Y: =162
+        ZIndex: =41
 

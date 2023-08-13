@@ -39,7 +39,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Cmt_GccHeader_4",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -65,7 +65,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -128,7 +128,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon7",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -294,7 +294,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCheck.ID%",
       "Name": "iconCheck1",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -461,7 +461,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCircle.ID%",
       "Name": "iconCircle1",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

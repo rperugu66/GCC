@@ -577,6 +577,5 @@ socialCareTeamdashBoard As screen:
         ZIndex: =42
 
     Cmt_GccHeader_1 As Cmt_GccHeader:
-        Height: =If(varShowsignout,235,85)
         ZIndex: =43
 

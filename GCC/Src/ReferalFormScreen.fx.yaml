@@ -2364,6 +2364,7 @@
             Button7 As button:
                 Fill: =RGBA(53, 109, 166, 1)
                 Font: =Font.'Segoe UI'
+                HoverFill: =Color.SkyBlue
                 OnSelect: |
                     =Patch(
                         'Referral form1',

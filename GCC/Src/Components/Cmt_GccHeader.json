@@ -51,7 +51,7 @@
         "Name": "rct_Header",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 308,
+        "PublishOrderIndex": 289,
         "Rules": [
           {
             "Category": "Design",
@@ -228,7 +228,7 @@
         "Name": "Img_CompanyLgo",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 309,
+        "PublishOrderIndex": 290,
         "Rules": [
           {
             "Category": "Data",
@@ -520,7 +520,7 @@
         "Name": "lbl_GCCAdultCare",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 310,
+        "PublishOrderIndex": 291,
         "Rules": [
           {
             "Category": "Data",
@@ -858,7 +858,7 @@
         "Name": "lbl_Username",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 311,
+        "PublishOrderIndex": 292,
         "Rules": [
           {
             "Category": "Data",
@@ -1221,7 +1221,7 @@
         "Name": "Img_UserLogo",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 312,
+        "PublishOrderIndex": 293,
         "Rules": [
           {
             "Category": "Data",
@@ -1505,7 +1505,7 @@
         "Name": "Icon13",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 313,
+        "PublishOrderIndex": 294,
         "Rules": [
           {
             "Category": "Design",
@@ -1744,7 +1744,7 @@
         "Name": "Rectangle1",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 314,
+        "PublishOrderIndex": 295,
         "Rules": [
           {
             "Category": "Design",
@@ -1995,7 +1995,7 @@
         "Name": "Label1",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 315,
+        "PublishOrderIndex": 296,
         "Rules": [
           {
             "Category": "Data",
@@ -2378,7 +2378,7 @@
         "Name": "Image1",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 316,
+        "PublishOrderIndex": 297,
         "Rules": [
           {
             "Category": "Data",
@@ -2698,7 +2698,7 @@
         "Name": "Label2",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 317,
+        "PublishOrderIndex": 298,
         "Rules": [
           {
             "Category": "Data",
@@ -3071,7 +3071,7 @@
         "Name": "Label3",
         "Parent": "Cmt_GccHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 318,
+        "PublishOrderIndex": 299,
         "Rules": [
           {
             "Category": "Data",

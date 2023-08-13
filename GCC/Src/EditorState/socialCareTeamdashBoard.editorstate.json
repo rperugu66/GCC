@@ -365,6 +365,14 @@
           "InvariantPropertyName": "Visible",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnChange",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -448,6 +456,11 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnChange",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -2369,14 +2382,28 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DisabledColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(244, 244, 244, 1)",
+          "InvariantPropertyName": "DisabledColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "PressedColor",
         "HoverColor",
         "Fill",
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "X",
         "Y",
         "Width",

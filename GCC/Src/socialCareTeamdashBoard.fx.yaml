@@ -442,6 +442,7 @@ socialCareTeamdashBoard As screen:
             Height: =457
             ModelId: |-
                 ="Document Processing RF1 16/7/2023, 5:52:08 pm (1da0ea84-d2c9-4b70-81ef-efe709d1ab33)"
+            OnChange: =false
             Visible: =varManualUpload
             Width: =400
             X: =392
@@ -463,6 +464,7 @@ socialCareTeamdashBoard As screen:
 
         Icon5 As icon.NextArrow:
             Color: =RGBA(56, 96, 178, 1)
+            DisplayMode: =If(IsBlank(FormProcessor1.Fields),DisplayMode.Disabled,DisplayMode.Edit)
             Height: =45
             Icon: =Icon.NextArrow
             OnSelect: |-

@@ -2552,6 +2552,28 @@
                 Y: =132
                 ZIndex: =1
 
+        DataCard9 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =161
+            Visible: =varForm2&& varLoginUser.Role="Assistant Manager"
+            Width: =1366
+            X: =0
+            Y: =15
+            ZIndex: =17
+
+            Icon16 As icon.BackArrow:
+                Color: =RGBA(56, 96, 178, 1)
+                Height: =40
+                Icon: =Icon.BackArrow
+                OnSelect: =Navigate(dashBoardScreen)
+                Width: =40
+                X: =36
+                Y: =84
+                ZIndex: =1
+
     Rectangle3_2 As rectangle:
         Fill: |
             =RGBA(53,109,166,1)

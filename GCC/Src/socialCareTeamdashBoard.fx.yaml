@@ -305,6 +305,7 @@ socialCareTeamdashBoard As screen:
                 );
                 If(
                     Radio1.Selected.Value = "Digital Referral form",
+                    Set(varReferralform1,{step1:true});
                     Set(
                         varNewform,
                         false

@@ -1321,7 +1321,9 @@
                         DataCardValue44 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
                             BorderThickness: =1
-                            Default: =If(varCurrentItem.Status="Open"||varCurrentItem.Status="Visited"||varCurrentItem.Status="Intimated"||varLoginUser.Role="Assistant Manager",Parent.Default, Concat(TextRecognizer1.Results,Text))
+                            Default: |-
+                                =/*If(varCurrentItem.Status="Open"||varCurrentItem.Status="Visited"||varCurrentItem.Status="Intimated"||varLoginUser.Role="Assistant Manager",Parent.Default, Concat(TextRecognizer1.Results,Text))*/
+                                If(varLoginUser.Role="Duty Manager"&&varCurrentItem.Status="Referred",Concat(TextRecognizer1.Results,Text),Parent.Default)
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Font: =Font.'Segoe UI'
@@ -2558,7 +2560,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =161
-            Visible: =varForm2&& varLoginUser.Role="Assistant Manager"
+            Visible: =If(varForm2&& (varLoginUser.Role="Assistant Manager"||varLoginUser.Role="Duty Manager")&&!(varCurrentItem.Status="Open")||!(varCurrentItem.Status="Intimated"),true,false)
             Width: =1366
             X: =0
             Y: =15

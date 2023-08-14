@@ -1321,7 +1321,7 @@
                         DataCardValue44 As text:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
                             BorderThickness: =1
-                            Default: =If(varCurrentItem.Status="Open"||varCurrentItem.Status="Visited"||varCurrentItem.Status="Intimated",Parent.Default, Concat(TextRecognizer1.Results,Text))
+                            Default: =If(varCurrentItem.Status="Open"||varCurrentItem.Status="Visited"||varCurrentItem.Status="Intimated"||varLoginUser.Role="Assistant Manager",Parent.Default, Concat(TextRecognizer1.Results,Text))
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Font: =Font.'Segoe UI'

@@ -427,6 +427,7 @@ socialCareTeamdashBoard As screen:
                 
                 EditForm(frm_ReferalForm);
                 Navigate(ReferalFormScreen);
+                Set(varReferralform1,{step1:true});
             Visible: =varManualUpload
             Width: =45
             X: =928

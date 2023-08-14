@@ -1675,7 +1675,7 @@
                 Font: =Font.'Segoe UI'
                 HoverColor: =Color.White
                 HoverFill: =Color.SkyBlue
-                OnSelect: |+
+                OnSelect: |-
                     =Set(
                         randLowest,
                         1
@@ -1698,10 +1698,9 @@
                             'Referral Number': "GCCDC-" & randBetween,
                             Status: "Open"
                         },
-                        frm_ReferalForm.Updates
-                    );
+                        frm_ReferalForm.Updates);
+                        
                     Navigate(SuccessScreen);
-                    
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0

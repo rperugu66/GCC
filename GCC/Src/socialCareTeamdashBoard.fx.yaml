@@ -634,7 +634,7 @@ socialCareTeamdashBoard As screen:
     Icon15 As icon.Settings:
         Color: =RGBA(255, 255, 255, 1)
         Height: =30
-        HoverColor: =
+        HoverColor: =Color.SkyBlue
         Icon: =Icon.Settings
         OnSelect: =Set(varShowSignout,!varShowSignout)
         Width: =30
@@ -655,6 +655,9 @@ socialCareTeamdashBoard As screen:
         Align: =Align.Center
         Font: =Font.'Segoe UI'
         Height: =33
+        HoverFill: =Color.SkyBlue
+        OnSelect: |
+            =Navigate(Login)
         Size: =12
         Text: ="Sign out"
         Visible: =varShowSignout

@@ -1701,7 +1701,6 @@
                         frm_ReferalForm.Updates
                     );
                     Navigate(SuccessScreen);
-                    MailtoDutyManagerforReferralform2.Run(varCurrentItem.Name);
                     
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0

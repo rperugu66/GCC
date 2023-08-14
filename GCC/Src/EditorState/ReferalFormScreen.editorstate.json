@@ -4738,7 +4738,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Client Email_DataCard1",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5085,7 +5085,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Client Mobile Number_DataCard1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39628,7 +39628,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Referrer Name_DataCard1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40174,7 +40174,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Start Date of Care Program_DataCard1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46939,7 +46939,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title_DataCard1",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

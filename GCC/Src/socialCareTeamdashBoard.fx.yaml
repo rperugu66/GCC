@@ -645,6 +645,7 @@ socialCareTeamdashBoard As screen:
     Rectangle15 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =150
+        Visible: =varShowSignout
         Width: =330
         X: =1036
         Y: =85
@@ -656,6 +657,7 @@ socialCareTeamdashBoard As screen:
         Height: =33
         Size: =12
         Text: ="Sign out"
+        Visible: =varShowSignout
         Width: =102
         X: =1264
         Y: =85
@@ -669,6 +671,7 @@ socialCareTeamdashBoard As screen:
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
+        Visible: =varShowSignout
         Width: =90
         X: =1039
         Y: =116
@@ -681,6 +684,7 @@ socialCareTeamdashBoard As screen:
         Size: =14
         Text: |
             =User().FullName
+        Visible: =varShowSignout
         Width: =238
         X: =1128
         Y: =120
@@ -691,6 +695,7 @@ socialCareTeamdashBoard As screen:
         Height: =37
         Size: =12
         Text: =User().Email
+        Visible: =varShowSignout
         Width: =226
         X: =1128
         Y: =155

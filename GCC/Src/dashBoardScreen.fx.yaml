@@ -54,6 +54,7 @@ dashBoardScreen As screen:
                  ViewForm(frm_ReferalForm);
                  Navigate(ReferalFormScreen);
                  Set(varSocialWorker,false);
+                 Set(varReferralform1,{step1:true});
             PaddingBottom: =12
             PaddingLeft: =12
             PaddingRight: =12

@@ -1768,7 +1768,7 @@
                           }
                     );
                     Navigate(SuccessScreen,ScreenTransition.Cover);
-                    //MailtoDutyManagerforReferralform2.Run(varCurrentItem.Title);
+                    MailtoDutyManagerforReferralform2.Run(varCurrentFormProcessorItem.Name);
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0

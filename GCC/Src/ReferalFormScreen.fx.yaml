@@ -1279,7 +1279,7 @@
 
                 Form3 As form:
                     DataSource: ='Referral form1'
-                    DefaultMode: =If(varCurrentItem.Status="Open",FormMode.View,FormMode.Edit)
+                    DefaultMode: =If(varCurrentItem.Status="Referred",FormMode.Edit,FormMode.View)
                     Fill: |
                         =Color.White
                     Height: =409

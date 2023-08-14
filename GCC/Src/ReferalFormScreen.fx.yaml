@@ -1598,7 +1598,7 @@
                 Icon: =Icon.BackArrow
                 OnSelect: =Set(varForm1,true);Set(varForm2,false);
                 Width: =40
-                X: =24
+                X: =36
                 Y: =112
                 ZIndex: =4
 

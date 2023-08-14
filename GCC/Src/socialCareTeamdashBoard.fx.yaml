@@ -655,7 +655,9 @@ socialCareTeamdashBoard As screen:
         Align: =Align.Center
         Font: =Font.'Segoe UI'
         Height: =33
-        HoverFill: =Color.SkyBlue
+        HoverColor: =Color.SkyBlue
+        HoverFill: |
+            =Self.Fill
         OnSelect: |
             =Navigate(Login)
         Size: =12

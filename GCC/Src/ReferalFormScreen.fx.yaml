@@ -2551,7 +2551,134 @@
                 Y: =132
                 ZIndex: =1
 
-    Cmt_GccHeader_3 As Cmt_GccHeader:
+    Rectangle3_2 As rectangle:
+        Fill: |
+            =RGBA(53,109,166,1)
         Height: =85
+        Width: =1366
+        Y: =20
         ZIndex: =4
+
+    Image2_2 As image:
+        Height: =65
+        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+        Width: =250
+        X: =17
+        Y: =30
+        ZIndex: =5
+
+    Label5_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =65
+        Size: =26
+        Text: ="GCC Adult Care Center"
+        Width: =493
+        X: =407
+        Y: =30
+        ZIndex: =6
+
+    Image3_2 As image:
+        Height: =50
+        Image: |
+            =User().Image
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =56
+        RadiusBottomRight: =56
+        RadiusTopLeft: =56
+        RadiusTopRight: =56
+        Width: =50
+        X: =1008
+        Y: =37
+        ZIndex: =7
+
+    Label14_2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =65
+        Size: =16
+        Text: |
+            =User().FullName
+        Width: =256
+        X: =1058
+        Y: =30
+        ZIndex: =8
+
+    Icon15_2 As icon.Settings:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        HoverColor: =Color.SkyBlue
+        Icon: =Icon.Settings
+        OnSelect: =Set(varShowSignout,!varShowSignout)
+        Width: =30
+        X: =1300
+        Y: =48
+        ZIndex: =9
+
+    Rectangle15_2 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =150
+        Visible: =varShowSignout
+        Width: =330
+        X: =1036
+        Y: =105
+        ZIndex: =10
+
+    Label15_2 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        Height: =33
+        HoverColor: =Color.SkyBlue
+        HoverFill: |
+            =Self.Fill
+        OnSelect: |
+            =Navigate(Login)
+        Size: =12
+        Text: ="Sign out"
+        Visible: =varShowSignout
+        Width: =102
+        X: =1264
+        Y: =105
+        ZIndex: =11
+
+    Image4_2 As image:
+        Height: =90
+        Image: |
+            =User().Image
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =varShowSignout
+        Width: =90
+        X: =1039
+        Y: =136
+        ZIndex: =12
+
+    Label17_2 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =35
+        Size: =14
+        Text: |
+            =User().FullName
+        Visible: =varShowSignout
+        Width: =238
+        X: =1128
+        Y: =140
+        ZIndex: =13
+
+    Label18_2 As label:
+        Font: =Font.'Segoe UI'
+        Height: =37
+        Size: =12
+        Text: =User().Email
+        Visible: =varShowSignout
+        Width: =226
+        X: =1128
+        Y: =175
+        ZIndex: =14
 

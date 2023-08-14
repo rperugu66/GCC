@@ -2560,7 +2560,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =161
-            Visible: =If(varForm2&& (varLoginUser.Role="Assistant Manager"||varLoginUser.Role="Duty Manager")&&!(varCurrentItem.Status="Open")||!(varCurrentItem.Status="Intimated"),true,false)
+            Visible: =If(!varForm1 &&varForm2 && (varLoginUser.Role="Assistant Manager"||varLoginUser.Role="Duty Manager")&&!(varCurrentItem.Status="Open")||!(varCurrentItem.Status="Intimated"),true,false)
             Width: =1366
             X: =0
             Y: =15

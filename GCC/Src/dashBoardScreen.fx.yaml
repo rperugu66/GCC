@@ -370,9 +370,6 @@ dashBoardScreen As screen:
             Y: =389
             ZIndex: =26
 
-    Cmt_GccHeader_2 As Cmt_GccHeader:
-        ZIndex: =36
-
     grpHistoryPopup As group:
         Height: =5
         Width: =5

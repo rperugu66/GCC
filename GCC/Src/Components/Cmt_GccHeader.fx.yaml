@@ -37,10 +37,10 @@ Cmt_GccHeader As CanvasComponent:
         Height: =50
         Image: =User().Image
         ImagePosition: =ImagePosition.Fill
-        RadiusBottomLeft: =56
-        RadiusBottomRight: =56
-        RadiusTopLeft: =56
-        RadiusTopRight: =56
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
         Width: =50
         X: =1008
         Y: =17

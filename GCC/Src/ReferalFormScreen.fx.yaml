@@ -133,7 +133,10 @@
 
                         StarVisible3 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey3.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -207,7 +210,10 @@
 
                         StarVisible1 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey1.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -281,7 +287,10 @@
 
                         StarVisible11 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey11.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -357,7 +366,10 @@
 
                         StarVisible6 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey6.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -432,7 +444,10 @@
 
                         StarVisible2 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey2.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -506,7 +521,10 @@
 
                         StarVisible12 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey12.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -583,7 +601,10 @@
 
                         StarVisible7 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey7.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -657,7 +678,10 @@
 
                         StarVisible4 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey4.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -733,7 +757,10 @@
 
                         StarVisible10 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey10.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -809,7 +836,10 @@
 
                         StarVisible9 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey9.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -885,7 +915,10 @@
 
                         StarVisible8 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey8.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -968,7 +1001,10 @@
 
                         StarVisible14 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey14.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -1045,7 +1081,10 @@
 
                         StarVisible5 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey5.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
@@ -1062,7 +1101,7 @@
                         DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Consent")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        Required: =false
+                        Required: =true
                         Update: =DataCardValue15.Value
                         Visible: =varReferralform1.step3
                         Width: =Parent.Width
@@ -1113,13 +1152,16 @@
 
                         StarVisible15 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey15.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
                             X: =61
-                            Y: =40
+                            Y: =28
                             ZIndex: =4
 
                         Checkbox1 As checkbox:
@@ -1130,7 +1172,7 @@
                             Text: ="I hereby give consent to Adult care programme to utilize my information"
                             Width: =1083
                             X: =30
-                            Y: =25
+                            Y: =40
                             ZIndex: =5
 
                     Signature_DataCard1 As typedDataCard.textualEditCard:

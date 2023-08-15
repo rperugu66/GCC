@@ -172,8 +172,12 @@ socialCareTeamdashBoard As screen:
             OnSelect: |-
                 =Set(
                     varHistory,
+                    GetVersionHistory.Run(ThisItem.ID);
+                
+                /*Set(
+                    varHistory,
                     GetVersionHistory.Run(ThisItem.ID).history
-                );
+                );*/
                 //Set(varHistory1,'Copyof-GetVersionHistory'.Run(ThisItem.ID));
                 
                 Set(varHistoryPopUp,true);
@@ -185,10 +189,10 @@ socialCareTeamdashBoard As screen:
                     )
                 );
                 
-                Sort(
+                /*Sort(
                     colFinalData,
                     Date(ThisItem.Created,"",""),SortOrder.Descending
-                );
+                );*/
             Width: =25
             X: =1138
             Y: =13

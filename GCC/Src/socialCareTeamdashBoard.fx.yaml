@@ -189,6 +189,10 @@ socialCareTeamdashBoard As screen:
                     )
                 );
                 
+                
+                
+                
+                
                 /*Sort(
                     colFinalData,
                     Date(ThisItem.Created,"",""),SortOrder.Descending
@@ -548,9 +552,9 @@ socialCareTeamdashBoard As screen:
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
-            TemplateSize: =73
+            TemplateSize: =345
             Visible: =varHistoryPopUp
-            Width: =918
+            Width: =790
             X: =227
             Y: =220
             ZIndex: =35
@@ -559,17 +563,15 @@ socialCareTeamdashBoard As screen:
                 Height: =0
                 OnSelect: =Select(Parent)
                 Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - Self.Height
+                Y: =177
                 ZIndex: =5
 
             Label21 As label:
-                Height: =49
+                Height: =317
                 OnSelect: =Select(Parent)
                 Size: =14
                 Text: =ThisItem.Value
-                Width: =839
-                X: =78
-                Y: =6
+                Width: =790
                 ZIndex: =7
 
     Label13 As label:

@@ -172,7 +172,7 @@ socialCareTeamdashBoard As screen:
             OnSelect: |-
                 =Set(
                     varHistory,
-                    GetVersionHistory.Run(ThisItem.ID);
+                    GetVersionHistory.Run(ThisItem.ID).history;
                 
                 /*Set(
                     varHistory,

@@ -4521,19 +4521,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Client Email_DataCard1'.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'End Date of Care Program_DataCard1'.DataCardValue12.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Client Email_DataCard1'.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'End Date of Care Program_DataCard1'.DataCardValue12.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Client Email_DataCard1'.DataCardValue3"
+                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'End Date of Care Program_DataCard1'.DataCardValue12"
               }
             }
           ],
@@ -4551,19 +4551,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'End Date of Care Program_DataCard1'.DataCardValue12.AccessibleLabel"
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Client Email_DataCard1'.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'End Date of Care Program_DataCard1'.DataCardValue12.AccessibleLabel",
+                  "fullyQualifiedName": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Client Email_DataCard1'.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReferalFormScreen",
-                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'End Date of Care Program_DataCard1'.DataCardValue12"
+                "type": "ReferalFormScreen.ReferalFormCanvas.DataCard3.Container1.frm_ReferalForm.'Client Email_DataCard1'.DataCardValue3"
               }
             }
           ],

@@ -1410,12 +1410,16 @@
 
                         StarVisible44 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey44.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey44.Y
+                            X: =187
+                            Y: =10
                             ZIndex: =4
 
                         TextRecognizer1 As TextRecognizer:
@@ -1465,6 +1469,8 @@
                         DataCardValue45 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
                             BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronFill: =RGBA(0, 0, 0, 1)
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
@@ -1497,12 +1503,16 @@
 
                         StarVisible45 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey45.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey45.Y
+                            X: =170
+                            Y: =10
                             ZIndex: =4
 
                     "'Care Centre Opted_DataCard2' As typedDataCard.comboBoxEditCard":
@@ -1537,6 +1547,8 @@
                         DataCardValue46 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black, Color.Red)
                             BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronFill: =RGBA(0, 0, 0, 1)
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
@@ -1569,12 +1581,16 @@
 
                         StarVisible46 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey46.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey46.Y
+                            X: =189
+                            Y: =10
                             ZIndex: =4
 
         DataCard6 As dataCard.blankCard:
@@ -1635,7 +1651,7 @@
                         Form3.Updates
                     );
                     Navigate(SuccessScreen);
-                    //'MailtoAssistantManagerforServiceuser/FamilyVisit-Ver25'.Run(varCurrentItem.Title);
+                    'MailtoAssistantManagerforServiceuser/FamilyVisit-Ver25'.Run(varCurrentItem.Title);
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0

@@ -1893,7 +1893,7 @@
                         DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"VisitDate")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        Required: =false
+                        Required: =true
                         Update: =DataCardValue40.SelectedDate
                         Width: =Parent.Width/2-120
                         X: =0
@@ -1921,6 +1921,8 @@
                             DisplayMode: =Parent.DisplayMode
                             EndYear: =Year(Today())+100
                             Font: =Font.'Segoe UI'
+                            IconBackground: =Color.White//RGBA(56, 96, 178, 1)
+                            IconFill: =Color.Black//RGBA(255, 255, 255, 1)
                             IsEditable: =true
                             PaddingBottom: =0
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -1949,11 +1951,15 @@
 
                         StarVisible40 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey40.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
+                            X: =113
                             Y: =DataCardKey40.Y
                             ZIndex: =4
 

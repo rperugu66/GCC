@@ -141,7 +141,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =137
+                            X: =132
                             Y: =DataCardKey3.Y
                             ZIndex: =4
 
@@ -218,7 +218,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =138
+                            X: =137
                             Y: =DataCardKey1.Y
                             ZIndex: =4
 
@@ -692,7 +692,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =127
+                            X: =125
                             Y: =DataCardKey4.Y
                             ZIndex: =4
 
@@ -1099,7 +1099,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =151
+                            X: =148
                             Y: =10
                             ZIndex: =4
 

@@ -2091,7 +2091,7 @@
                         DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Isusersatisfiedwiththecarefacili")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        Required: =false
+                        Required: =true
                         Update: =DataCardValue34.Value
                         Width: =Parent.Width/2-120
                         X: =0
@@ -2140,11 +2140,15 @@
 
                         StarVisible34 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey34.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
+                            X: =354
                             Y: =DataCardKey34.Y
                             ZIndex: =4
 
@@ -2169,7 +2173,7 @@
                         DisplayName: =DataSourceInfo([@'Referral form1'],DataSourceInfo.DisplayName,"Reconfirmthearrivaldate")
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
-                        Required: =false
+                        Required: =true
                         Update: =DataCardValue35.SelectedDate
                         Width: =Parent.Width/2-120
                         X: =1
@@ -2227,12 +2231,16 @@
 
                         StarVisible35 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey35.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey35.Y
+                            X: =257
+                            Y: =10
                             ZIndex: =4
 
                     "'Emergency Mobile Number_DataCard1' As typedDataCard.textualEditCard":
@@ -2244,7 +2252,7 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "EmergencyMobileNumber")
-                        Required: =false
+                        Required: =true
                         Update: =DataCardValue36.Text
                         Width: =Parent.Width/2-120
                         X: =0
@@ -2301,12 +2309,16 @@
 
                         StarVisible36 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey36.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey36.Y
+                            X: =270
+                            Y: =10
                             ZIndex: =4
 
                     "'Emergency Email_DataCard1' As typedDataCard.textualEditCard":
@@ -2318,7 +2330,7 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =50
                         MaxLength: =DataSourceInfo([@'Referral form1'], DataSourceInfo.MaxLength, "EmergencyEmail")
-                        Required: =false
+                        Required: =true
                         Update: =DataCardValue37.Text
                         Width: =Parent.Width/2-120
                         X: =1
@@ -2375,12 +2387,16 @@
 
                         StarVisible37 As label:
                             Align: =Align.Center
+                            Color: =RGBA(184, 0, 0, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =DataCardKey37.Height
+                            Size: =15
                             Text: ="*"
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            Y: =DataCardKey37.Y
+                            X: =179
+                            Y: =10
                             ZIndex: =4
 
         DataCard16 As dataCard.blankCard:

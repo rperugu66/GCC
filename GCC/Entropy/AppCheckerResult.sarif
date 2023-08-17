@@ -7844,6 +7844,36 @@
           },
           "ruleId": "app-NotOfflineConnectors",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.MailtoServiceUser/FamilyforServiceuser/FamilyVisit-Ver25"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.MailtoServiceUser/FamilyforServiceuser/FamilyVisit-Ver25",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "MailtoServiceUser/FamilyforServiceuser/FamilyVisit-Ver25",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-NotOfflineConnectors",
+          "ruleIndex": 8
         }
       ],
       "tool": {

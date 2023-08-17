@@ -650,6 +650,8 @@
                             DisplayMode: =Parent.DisplayMode
                             EndYear: =Year(Today())+100
                             Font: =Font.'Segoe UI'
+                            IconBackground: =Color.White//RGBA(56, 96, 178, 1)
+                            IconFill: =Color.Black //RGBA(255, 255, 255, 1)
                             IsEditable: =true
                             PaddingBottom: =0
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -1046,6 +1048,8 @@
                         DataCardValue5 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error),Color.Black , Color.Red)
                             BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronFill: =RGBA(0, 0, 0, 1)
                             Default: |-
                                 =If(varManualUpload=true,{Value:varCurrentFormProcessorItem.Gender},Parent.Default)
                             DefaultSelectedItems: =Parent.Default

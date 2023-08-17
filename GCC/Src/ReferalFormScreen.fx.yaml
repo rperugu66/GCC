@@ -376,7 +376,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =161
+                            X: =156
                             Y: =10
                             ZIndex: =4
 
@@ -613,7 +613,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =241
+                            X: =243
                             Y: =10
                             ZIndex: =4
 
@@ -771,7 +771,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =170
+                            X: =165
                             Y: =DataCardKey10.Y
                             ZIndex: =4
 
@@ -850,7 +850,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =260
+                            X: =258
                             Y: =10
                             ZIndex: =4
 
@@ -929,7 +929,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =181
+                            X: =175
                             Y: =DataCardKey8.Y
                             ZIndex: =4
 
@@ -1017,7 +1017,7 @@
                             Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                             Width: =30
                             Wrap: =false
-                            X: =174
+                            X: =165
                             Y: =DataCardKey14.Y
                             ZIndex: =4
 
@@ -1182,7 +1182,7 @@
                             Text: ="I hereby give consent to Adult care programme to utilize my information"
                             Width: =1083
                             X: =30
-                            Y: =40
+                            Y: =39
                             ZIndex: =5
 
                     Signature_DataCard1 As typedDataCard.textualEditCard:

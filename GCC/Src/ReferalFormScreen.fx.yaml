@@ -2118,6 +2118,7 @@
                             DisplayMode: =Parent.DisplayMode
                             Font: =Font.'Segoe UI'
                             Tooltip: =Parent.DisplayName
+                            Visible: =false
                             X: =30
                             Y: =DataCardKey34.Y + DataCardKey34.Height + 5
                             ZIndex: =2
@@ -2146,6 +2147,19 @@
                             Wrap: =false
                             Y: =DataCardKey34.Y
                             ZIndex: =4
+
+                        Radio2 As radio:
+                            BorderColor: =RGBA(255, 255, 255, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =53
+                            Items: =["Yes","No"]
+                            Layout: =Layout.Horizontal
+                            RadioBorderColor: =RGBA(0, 0, 0, 1)
+                            RadioSize: =30
+                            Width: =285
+                            X: =35
+                            Y: =45
+                            ZIndex: =5
 
                     "'Reconfirm the arrival date_DataCard1' As typedDataCard.dateEditCard":
                         BorderStyle: =BorderStyle.Solid
@@ -2183,6 +2197,8 @@
                             DisplayMode: =Parent.DisplayMode
                             EndYear: =Year(Today())+100
                             Font: =Font.'Segoe UI'
+                            IconBackground: =Color.White//RGBA(56, 96, 178, 1)
+                            IconFill: =Color.Black//RGBA(255, 255, 255, 1)
                             IsEditable: =true
                             PaddingBottom: =0
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -2646,7 +2662,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =161
-            Visible: =If(varForm2 && (varLoginUser.Role="Assistant Manager")&&!(varCurrentItem.Status="Open")||(varCurrentItem.Status="Intimated"),true,false)
+            Visible: =If(varForm2 && (varLoginUser.Role="Assistant Manager")&&!((varCurrentItem.Status="Open")||(varCurrentItem.Status="Intimated")),true,false)
             Width: =1366
             X: =0
             Y: =15

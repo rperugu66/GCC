@@ -111,11 +111,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "254d0c20-fb40-4785-949c-09ce71a199e1",
-    "Id": "254d0c20-fb40-4785-949c-09ce71a199e1",
+    "Id": "6756d88d-1e6a-4a4f-9e98-8f947ea5927a",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "Account Management System",
+    "Name": "Account+Management+System.msapp",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false

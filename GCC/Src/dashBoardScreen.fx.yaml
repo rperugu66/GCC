@@ -578,6 +578,7 @@ dashBoardScreen As screen:
             ZIndex: =33
 
             lbl_HistoryVal As label:
+                Font: =Font.'Segoe UI'
                 Height: =46
                 OnSelect: =Select(Parent)
                 Size: =14

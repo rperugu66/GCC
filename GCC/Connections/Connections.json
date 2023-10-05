@@ -50,7 +50,7 @@
       "cea3dd24-6948-491d-9d0d-3b116de67e46",
       "2338698c-e370-44fe-a2db-dee0d3ce6cb4",
       "f73a2481-1232-4160-81d0-e201858a53bc",
-      "6cee36d6-7fbd-4833-bc97-2b7d99b7fa8e"
+      "d7084e53-9117-40ca-8d2c-e0420b89a20f"
     ],
     "id": "1405619f-515a-4d1e-b5c3-38e2eaea483b"
   },
@@ -157,34 +157,6 @@
     ],
     "id": "5b1ea56e-8cd4-4619-b654-355cbe4f0465"
   },
-  "6cee36d6-7fbd-4833-bc97-2b7d99b7fa8e": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "b1a50c19-4ba0-4138-91b0-9a17c6338940"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "b1a50c19-4ba0-4138-91b0-9a17c6338940"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "GetVersionHistory"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "1405619f-515a-4d1e-b5c3-38e2eaea483b"
-    },
-    "dependents": [],
-    "id": "6cee36d6-7fbd-4833-bc97-2b7d99b7fa8e"
-  },
   "83753397-f1f3-460e-9cd4-7387900abaa9": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -242,6 +214,34 @@
     },
     "dependents": [],
     "id": "cea3dd24-6948-491d-9d0d-3b116de67e46"
+  },
+  "d7084e53-9117-40ca-8d2c-e0420b89a20f": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b1a50c19-4ba0-4138-91b0-9a17c6338940"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b1a50c19-4ba0-4138-91b0-9a17c6338940"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "GetVersionHistory"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "1405619f-515a-4d1e-b5c3-38e2eaea483b"
+    },
+    "dependents": [],
+    "id": "d7084e53-9117-40ca-8d2c-e0420b89a20f"
   },
   "f73a2481-1232-4160-81d0-e201858a53bc": {
     "connectionRef": {

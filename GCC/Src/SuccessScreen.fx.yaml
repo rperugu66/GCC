@@ -157,7 +157,8 @@
         HoverFill: |
             =Self.Fill
         OnSelect: |
-            =Navigate(Login)
+            =Navigate(Login);
+            Set(varShowSignout,false);
         Size: =12
         Text: ="Sign out"
         Visible: =varShowSignout

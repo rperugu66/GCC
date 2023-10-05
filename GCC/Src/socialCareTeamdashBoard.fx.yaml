@@ -2,13 +2,115 @@ socialCareTeamdashBoard As screen:
     Fill: =RGBA(237, 237, 237, 1)
     OnVisible: =Set(varNewform,false);
 
+    Rectangle3 As rectangle:
+        Fill: |
+            =RGBA(53,109,166,1)
+        Height: =85
+        Width: =1366
+        ZIndex: =1
+
+    Image2 As image:
+        Height: =65
+        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+        Width: =250
+        X: =17
+        Y: =10
+        ZIndex: =2
+
+    Label5 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =65
+        Size: =26
+        Text: ="GCC Adult Care Center"
+        Width: =493
+        X: =407
+        Y: =10
+        ZIndex: =3
+
+    Image3 As image:
+        Height: =50
+        Image: |
+            =User().Image
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =56
+        RadiusBottomRight: =56
+        RadiusTopLeft: =56
+        RadiusTopRight: =56
+        Width: =50
+        X: =1008
+        Y: =17
+        ZIndex: =4
+
+    Label14 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =65
+        Size: =16
+        Text: |
+            =User().FullName
+        Width: =256
+        X: =1058
+        Y: =10
+        ZIndex: =5
+
+    Icon15 As icon.Settings:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        HoverColor: =Color.SkyBlue
+        Icon: =Icon.Settings
+        OnSelect: =Set(varShowSignout,!varShowSignout)
+        Width: =30
+        X: =1300
+        Y: =28
+        ZIndex: =6
+
     Rectangle4 As rectangle:
         Fill: =RGBA(219, 219, 219, 1)
         Height: =62
         Visible: =false
         Width: =1366
         Y: =60
-        ZIndex: =1
+        ZIndex: =7
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Button3 As button:
+            BorderThickness: =0
+            Fill: =RGBA(53, 109, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Set(varNewform,true)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: =    "New Form"
+            Width: =175
+            X: =1134
+            Y: =109
+            ZIndex: =10
+
+        Icon2 As icon.Add:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(53, 109, 166, 1)
+            Height: =25
+            HoverFill: =Color.Transparent
+            Icon: =Icon.Add
+            OnSelect: =Set(varNewform,true)
+            Width: =25
+            X: =1150
+            Y: =119
+            ZIndex: =11
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
         BorderColor: =Color.Gray
@@ -23,7 +125,7 @@ socialCareTeamdashBoard As screen:
         Width: =1256
         X: =55
         Y: =238
-        ZIndex: =2
+        ZIndex: =8
 
         Title3 As label:
             Color: =RGBA(56, 96, 178, 1)
@@ -214,43 +316,7 @@ socialCareTeamdashBoard As screen:
         Width: =1256
         X: =55
         Y: =176
-        ZIndex: =6
-
-    Group1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =7
-
-        Button3 As button:
-            BorderThickness: =0
-            Fill: =RGBA(53, 109, 166, 1)
-            Font: =Font.'Segoe UI'
-            Height: =42
-            OnSelect: =Set(varNewform,true)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: =    "New Form"
-            Width: =175
-            X: =1134
-            Y: =109
-            ZIndex: =7
-
-        Icon2 As icon.Add:
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(53, 109, 166, 1)
-            Height: =25
-            HoverFill: =Color.Transparent
-            Icon: =Icon.Add
-            OnSelect: =Set(varNewform,true)
-            Width: =25
-            X: =1150
-            Y: =119
-            ZIndex: =8
+        ZIndex: =9
 
     grpNewformPopup As group:
         Height: =5
@@ -265,7 +331,7 @@ socialCareTeamdashBoard As screen:
             OnSelect: =false                                   
             Visible: =varNewform
             Width: =1366
-            ZIndex: =11
+            ZIndex: =12
 
         Rectangle10 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -274,7 +340,7 @@ socialCareTeamdashBoard As screen:
             Width: =658
             X: =353
             Y: =171
-            ZIndex: =12
+            ZIndex: =13
 
         Label6 As label:
             Align: =Align.Center
@@ -290,7 +356,7 @@ socialCareTeamdashBoard As screen:
             Width: =554
             X: =406
             Y: =259
-            ZIndex: =13
+            ZIndex: =14
 
         Radio1 As radio:
             Align: =Align.Center
@@ -336,7 +402,7 @@ socialCareTeamdashBoard As screen:
             Width: =554
             X: =457
             Y: =319
-            ZIndex: =14
+            ZIndex: =15
 
         Icon3 As icon.Cancel:
             Color: =RGBA(255, 0, 0, 1)
@@ -347,7 +413,7 @@ socialCareTeamdashBoard As screen:
             Width: =40
             X: =959
             Y: =184
-            ZIndex: =15
+            ZIndex: =16
 
     Label8 As label:
         Font: =Font.'Segoe UI'
@@ -358,7 +424,7 @@ socialCareTeamdashBoard As screen:
         Width: =500
         X: =486
         Y: =107
-        ZIndex: =20
+        ZIndex: =17
 
     Rectangle14 As rectangle:
         Fill: =RGBA(0, 0, 0, 0.8)
@@ -366,7 +432,7 @@ socialCareTeamdashBoard As screen:
         Visible: =varHistoryPopUp
         Width: =1366
         Y: =1
-        ZIndex: =27
+        ZIndex: =24
 
     grpManualUploadPopup As group:
         Height: =5
@@ -380,7 +446,7 @@ socialCareTeamdashBoard As screen:
             Height: =768
             Visible: =varManualUpload
             Width: =1366
-            ZIndex: =21
+            ZIndex: =18
 
         Rectangle6 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -389,7 +455,7 @@ socialCareTeamdashBoard As screen:
             Width: =838
             X: =296
             Y: =65
-            ZIndex: =22
+            ZIndex: =19
 
         FormProcessor1 As FormProcessor:
             BorderColor: =RGBA(210, 208, 206, 1)
@@ -407,7 +473,7 @@ socialCareTeamdashBoard As screen:
             Width: =400
             X: =392
             Y: =171
-            ZIndex: =23
+            ZIndex: =20
 
         Icon4 As icon.Cancel:
             Color: =RGBA(255, 0, 0, 1)
@@ -420,7 +486,7 @@ socialCareTeamdashBoard As screen:
             Width: =50
             X: =1034
             Y: =88
-            ZIndex: =24
+            ZIndex: =21
 
         Icon5 As icon.NextArrow:
             Color: =RGBA(56, 96, 178, 1)
@@ -441,7 +507,7 @@ socialCareTeamdashBoard As screen:
             Width: =45
             X: =928
             Y: =330
-            ZIndex: =25
+            ZIndex: =22
 
         Label9 As label:
             Align: =Align.Center
@@ -463,116 +529,7 @@ socialCareTeamdashBoard As screen:
             Visible: =varManualUpload
             X: =879
             Y: =389
-            ZIndex: =26
-
-    Group3 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =36
-
-        Rectangle18 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =649
-            Visible: =varHistoryPopUp
-            Width: =829
-            X: =205
-            Y: =60
-            ZIndex: =28
-
-        Rectangle19 As rectangle:
-            Fill: =RGBA(204, 231, 246, 1)
-            Height: =61
-            Visible: =varHistoryPopUp
-            Width: =680
-            X: =279
-            Y: =151
-            ZIndex: =29
-
-        Label12 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Created"
-            Visible: =varHistoryPopUp
-            Width: =167
-            X: =342
-            Y: =166
-            ZIndex: =30
-
-        Label16 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Version"
-            Visible: =varHistoryPopUp
-            Width: =128
-            X: =492
-            Y: =166
-            ZIndex: =31
-
-        Label19 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Modified By"
-            Visible: =varHistoryPopUp
-            Width: =191
-            X: =598
-            Y: =166
-            ZIndex: =32
-
-        Label20 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Referral Number"
-            Visible: =varHistoryPopUp
-            Width: =260
-            X: =751
-            Y: =166
-            ZIndex: =33
-
-        Icon11 As icon.Cancel:
-            Color: =RGBA(255, 0, 0, 1)
-            Height: =40
-            Icon: =Icon.Cancel
-            OnSelect: =Set(varHistoryPopUp,false);
-            Visible: =varHistoryPopUp
-            Width: =44
-            X: =973
-            Y: =93
-            ZIndex: =34
-
-        "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-            DelayItemLoading: =true
-            Height: =457
-            Items: =colFinalData
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplatePadding: =0
-            TemplateSize: =345
-            Visible: =varHistoryPopUp
-            Width: =790
-            X: =227
-            Y: =220
-            ZIndex: =35
-
-            Separator1 As rectangle:
-                Height: =0
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =177
-                ZIndex: =5
-
-            Label21 As label:
-                Height: =317
-                OnSelect: =Select(Parent)
-                Size: =14
-                Text: =ThisItem.Value
-                Width: =790
-                ZIndex: =7
+            ZIndex: =23
 
     Label13 As label:
         Font: =Font.'Segoe UI'
@@ -584,73 +541,7 @@ socialCareTeamdashBoard As screen:
         Width: =261
         X: =448
         Y: =107
-        ZIndex: =42
-
-    Rectangle3 As rectangle:
-        Fill: |
-            =RGBA(53,109,166,1)
-        Height: =85
-        Width: =1366
-        ZIndex: =43
-
-    Image2 As image:
-        Height: =65
-        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
-        Width: =250
-        X: =17
-        Y: =10
-        ZIndex: =44
-
-    Label5 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =65
-        Size: =26
-        Text: ="GCC Adult Care Center"
-        Width: =493
-        X: =407
-        Y: =10
-        ZIndex: =45
-
-    Image3 As image:
-        Height: =50
-        Image: |
-            =User().Image
-        ImagePosition: =ImagePosition.Fill
-        RadiusBottomLeft: =56
-        RadiusBottomRight: =56
-        RadiusTopLeft: =56
-        RadiusTopRight: =56
-        Width: =50
-        X: =1008
-        Y: =17
-        ZIndex: =46
-
-    Label14 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =65
-        Size: =16
-        Text: |
-            =User().FullName
-        Width: =256
-        X: =1058
-        Y: =10
-        ZIndex: =47
-
-    Icon15 As icon.Settings:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =30
-        HoverColor: =Color.SkyBlue
-        Icon: =Icon.Settings
-        OnSelect: =Set(varShowSignout,!varShowSignout)
-        Width: =30
-        X: =1300
-        Y: =28
-        ZIndex: =48
+        ZIndex: =33
 
     Rectangle15 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
@@ -659,7 +550,7 @@ socialCareTeamdashBoard As screen:
         Width: =330
         X: =1036
         Y: =85
-        ZIndex: =49
+        ZIndex: =34
 
     Label15 As label:
         Align: =Align.Center
@@ -677,7 +568,7 @@ socialCareTeamdashBoard As screen:
         Width: =102
         X: =1264
         Y: =85
-        ZIndex: =50
+        ZIndex: =35
 
     Image4 As image:
         Height: =90
@@ -691,7 +582,110 @@ socialCareTeamdashBoard As screen:
         Width: =90
         X: =1039
         Y: =116
-        ZIndex: =51
+        ZIndex: =36
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        Rectangle18 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =602
+            Visible: =varHistoryPopUp
+            Width: =829
+            X: =205
+            Y: =107
+            ZIndex: =25
+
+        Rectangle19 As rectangle:
+            Fill: =RGBA(204, 231, 246, 1)
+            Height: =61
+            Visible: =varHistoryPopUp
+            Width: =829
+            X: =205
+            Y: =109
+            ZIndex: =26
+
+        Label12 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Created"
+            Visible: =varHistoryPopUp
+            Width: =167
+            X: =838
+            Y: =114
+            ZIndex: =27
+
+        Label16 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Version"
+            Visible: =varHistoryPopUp
+            Width: =128
+            X: =214
+            Y: =114
+            ZIndex: =28
+
+        Label19 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Modified By"
+            Visible: =varHistoryPopUp
+            Width: =191
+            X: =380
+            Y: =114
+            ZIndex: =29
+
+        Label20 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Referral Number"
+            Visible: =varHistoryPopUp
+            Width: =260
+            X: =604
+            Y: =114
+            ZIndex: =30
+
+        "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            DelayItemLoading: =true
+            Height: =452
+            Items: =colFinalData
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =71
+            Visible: =varHistoryPopUp
+            Width: =803
+            X: =214
+            Y: =176
+            ZIndex: =32
+
+            Separator1 As rectangle:
+                Height: =0
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =177
+                ZIndex: =5
+
+            Label21 As label:
+                Font: =Font.'Segoe UI'
+                Height: =72
+                OnSelect: =Select(Parent)
+                Size: =14
+                Text: =ThisItem.Value
+                Width: =790
+                ZIndex: =7
 
     Label17 As label:
         Font: =Font.'Segoe UI'
@@ -704,7 +698,7 @@ socialCareTeamdashBoard As screen:
         Width: =238
         X: =1128
         Y: =120
-        ZIndex: =52
+        ZIndex: =37
 
     Label18 As label:
         Font: =Font.'Segoe UI'
@@ -715,5 +709,19 @@ socialCareTeamdashBoard As screen:
         Width: =226
         X: =1128
         Y: =155
-        ZIndex: =53
+        ZIndex: =38
+
+    Button1_1 As button:
+        BorderThickness: =0
+        Fill: =Color.Red
+        OnSelect: =Set(varHistoryPopUp,false);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Close"
+        Visible: =varHistoryPopUp
+        X: =554
+        Y: =655
+        ZIndex: =39
 

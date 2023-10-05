@@ -721,7 +721,7 @@ socialCareTeamdashBoard As screen:
         RadiusTopRight: =0
         Text: ="Close"
         Visible: =varHistoryPopUp
-        X: =554
-        Y: =655
+        X: =539
+        Y: =628
         ZIndex: =39
 

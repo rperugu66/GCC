@@ -483,7 +483,8 @@ socialCareTeamdashBoard As screen:
             Icon: =Icon.Cancel
             OnSelect: |-
                 =Set(varManualUpload,false);
-                Reset(FormProcessor1)
+                Reset(FormProcessor1);
+                Reset(Radio1);
             Visible: =varManualUpload
             Width: =50
             X: =1034

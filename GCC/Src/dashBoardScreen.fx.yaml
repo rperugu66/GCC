@@ -596,7 +596,6 @@ dashBoardScreen As screen:
             Size: =14
             Text: ="Status"
             Visible: =varHistoryPopUp
-            Width: =243
             X: =861
             Y: =114
             ZIndex: =35

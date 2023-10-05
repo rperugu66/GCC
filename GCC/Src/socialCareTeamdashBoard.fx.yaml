@@ -408,7 +408,9 @@ socialCareTeamdashBoard As screen:
             Color: =RGBA(255, 0, 0, 1)
             Height: =40
             Icon: =Icon.Cancel
-            OnSelect: =Set(varNewform,false)
+            OnSelect: |-
+                =Set(varNewform,false);
+                Reset(Radio1);
             Visible: =varNewform
             Width: =40
             X: =959

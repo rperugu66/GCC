@@ -2,13 +2,66 @@ dashBoardScreen As screen:
     Fill: =RGBA(237, 237, 237, 1)
     OnVisible: =Set(varNewform,false);
 
+    Rectangle3_1 As rectangle:
+        Fill: |
+            =RGBA(53,109,166,1)
+        Height: =85
+        Width: =1366
+        Y: =20
+        ZIndex: =1
+
+    Image2_1 As image:
+        Height: =65
+        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
+        Width: =250
+        X: =17
+        Y: =30
+        ZIndex: =2
+
+    Label5_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =65
+        Size: =26
+        Text: ="GCC Adult Care Center"
+        Width: =493
+        X: =407
+        Y: =30
+        ZIndex: =3
+
+    Label14_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =65
+        Size: =16
+        Text: |
+            =User().FullName
+        Width: =256
+        X: =1058
+        Y: =30
+        ZIndex: =4
+
+    Icon15_1 As icon.Settings:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        HoverColor: =Color.SkyBlue
+        Icon: =Icon.Settings
+        OnSelect: =Set(varShowSignout,!varShowSignout)
+        Width: =30
+        X: =1300
+        Y: =48
+        ZIndex: =5
+
     rect_RoleName As rectangle:
         Fill: =RGBA(219, 219, 219, 1)
         Height: =62
         Visible: =false
         Width: =1366
         Y: =60
-        ZIndex: =1
+        ZIndex: =6
 
     "glry_Dasboard As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
         BorderColor: =Color.Gray
@@ -23,7 +76,7 @@ dashBoardScreen As screen:
         Width: =1256
         X: =55
         Y: =238
-        ZIndex: =2
+        ZIndex: =7
 
         lbl_CaseId As label:
             Color: =RGBA(56, 96, 178, 1)
@@ -206,7 +259,18 @@ dashBoardScreen As screen:
         Width: =1256
         X: =55
         Y: =176
-        ZIndex: =6
+        ZIndex: =8
+
+    lbl_AssistantManagerView As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =43
+        Size: =18
+        Text: =If(varLoginUser.Role="Duty Manager", "Duty Manager Dashboard","Assistant Manager Dashboard")
+        Width: =500
+        X: =473
+        Y: =107
+        ZIndex: =9
 
     grpNewformPopup_1 As group:
         Height: =5
@@ -221,7 +285,7 @@ dashBoardScreen As screen:
             OnSelect: =false                                   
             Visible: =varNewform
             Width: =1366
-            ZIndex: =11
+            ZIndex: =23
 
         rect_Newform As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -230,7 +294,7 @@ dashBoardScreen As screen:
             Width: =658
             X: =353
             Y: =171
-            ZIndex: =12
+            ZIndex: =24
 
         lbl_ChooseOption As label:
             Align: =Align.Center
@@ -245,7 +309,7 @@ dashBoardScreen As screen:
             Width: =554
             X: =406
             Y: =259
-            ZIndex: =13
+            ZIndex: =25
 
         rdo_ManualOrDigital As radio:
             BorderColor: =Color.White
@@ -269,7 +333,7 @@ dashBoardScreen As screen:
             Width: =554
             X: =406
             Y: =324
-            ZIndex: =14
+            ZIndex: =26
 
         icn_NewformCancel As icon.Cancel:
             Color: =RGBA(255, 0, 0, 1)
@@ -280,266 +344,7 @@ dashBoardScreen As screen:
             Width: =40
             X: =959
             Y: =184
-            ZIndex: =15
-
-    lbl_AssistantManagerView As label:
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =43
-        Size: =18
-        Text: =If(varLoginUser.Role="Duty Manager", "Duty Manager Dashboard","Assistant Manager Dashboard")
-        Width: =500
-        X: =473
-        Y: =107
-        ZIndex: =20
-
-    rect_Dashboard As rectangle:
-        Fill: =RGBA(0, 0, 0,0.8)
-        Height: =768
-        Visible: =varHistoryPopUp
-        Width: =1366
-        ZIndex: =27
-
-    grpManualUploadPopup_1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =27
-
-        rect_ManualUploadBackground As rectangle:
-            Fill: =RGBA(0, 0, 0, 0.6)
-            Height: =768
-            Visible: =varManualUpload
-            Width: =1366
-            ZIndex: =21
-
-        rect_ManualUpload As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =613
-            Visible: =varManualUpload
-            Width: =838
-            X: =296
-            Y: =65
-            ZIndex: =22
-
-        fp_ManualUpload As FormProcessor:
-            BorderColor: =RGBA(210, 208, 206, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.Edit
-            FillColor: =RGBA(61, 95, 174, 1)
-            FontColor: =RGBA(255, 255, 255, 1)
-            Height: =520
-            ModelId: |-
-                ="Document Processing RF1 16/7/2023, 5:52:08 pm (1da0ea84-d2c9-4b70-81ef-efe709d1ab33)"
-            Visible: =varManualUpload
-            Width: =406
-            X: =392
-            Y: =108
-            ZIndex: =23
-
-        icn_ManualUploadCancel As icon.Cancel:
-            Color: =RGBA(255, 0, 0, 1)
-            Height: =50
-            Icon: =Icon.Cancel
-            OnSelect: =Set(varManualUpload,false)
-            Visible: =varManualUpload
-            Width: =50
-            X: =1034
-            Y: =88
-            ZIndex: =24
-
-        icn_ManualUploadNext As icon.NextArrow:
-            Color: =Color.Orange
-            Icon: =Icon.NextArrow
-            Visible: =varManualUpload
-            X: =922
-            Y: =307
-            ZIndex: =25
-
-        lbl_Proceed As label:
-            Align: =Align.Center
-            BorderColor: =Color.Orange
-            BorderThickness: =2
-            FontWeight: =FontWeight.Bold
-            Size: =16
-            Text: ="Proceed"
-            Visible: =varManualUpload
-            X: =879
-            Y: =389
-            ZIndex: =26
-
-    Rectangle3_1 As rectangle:
-        Fill: |
-            =RGBA(53,109,166,1)
-        Height: =85
-        Width: =1366
-        Y: =20
-        ZIndex: =36
-
-    grpHistoryPopup As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =36
-
-        rect_History As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =588
-            Visible: =varHistoryPopUp
-            Width: =750
-            X: =250
-            Y: =102
-            ZIndex: =28
-
-        rect_HistroryHeader As rectangle:
-            Fill: =RGBA(204, 231, 246, 1)
-            Height: =65
-            Visible: =varHistoryPopUp
-            Width: =671
-            X: =277
-            Y: =159
-            ZIndex: =29
-
-        lbl_Created As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Created"
-            Visible: =varHistoryPopUp
-            Width: =139
-            X: =334
-            Y: =166
-            ZIndex: =30
-
-        lbl_Versons As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Version "
-            Visible: =varHistoryPopUp
-            Width: =114
-            X: =473
-            Y: =166
-            ZIndex: =31
-
-        lbl_ModifiedBy As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Modified By"
-            Visible: =varHistoryPopUp
-            Width: =165
-            X: =573
-            Y: =166
-            ZIndex: =32
-
-        glry_History As gallery.galleryVertical:
-            DelayItemLoading: =true
-            Height: =454
-            Items: =colFinalData
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplateSize: =69
-            Visible: =varHistoryPopUp
-            Width: =671
-            X: =277
-            Y: =228
-            ZIndex: =33
-
-            lbl_HistoryVal As label:
-                Height: =46
-                OnSelect: =Select(Parent)
-                Size: =14
-                Text: =ThisItem.Value
-                Width: =794
-                X: =3
-                Y: =18
-                ZIndex: =1
-
-        icn_Close As icon.Cancel:
-            Color: =RGBA(255, 0, 0, 1)
-            Height: =40
-            Icon: =Icon.Cancel
-            OnSelect: =Set(varHistoryPopUp,false);
-            Visible: =varHistoryPopUp
-            Width: =40
-            X: =954
-            Y: =109
-            ZIndex: =34
-
-        lbl_RefNo As label:
-            FontWeight: =FontWeight.Bold
-            Height: =47
-            Size: =15
-            Text: ="Referral Number"
-            Visible: =varHistoryPopUp
-            Width: =243
-            X: =730
-            Y: =166
-            ZIndex: =35
-
-    Image2_1 As image:
-        Height: =65
-        Image: ='Gloucestershire-County-Council-White-logo-1024x188'
-        Width: =250
-        X: =17
-        Y: =30
-        ZIndex: =37
-
-    Label5_1 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =65
-        Size: =26
-        Text: ="GCC Adult Care Center"
-        Width: =493
-        X: =407
-        Y: =30
-        ZIndex: =38
-
-    Image3_1 As image:
-        Height: =50
-        Image: |
-            =User().Image
-        ImagePosition: =ImagePosition.Fill
-        RadiusBottomLeft: =56
-        RadiusBottomRight: =56
-        RadiusTopLeft: =56
-        RadiusTopRight: =56
-        Width: =50
-        X: =1008
-        Y: =37
-        ZIndex: =39
-
-    Label14_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =65
-        Size: =16
-        Text: |
-            =User().FullName
-        Width: =256
-        X: =1058
-        Y: =30
-        ZIndex: =40
-
-    Icon15_1 As icon.Settings:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =30
-        HoverColor: =Color.SkyBlue
-        Icon: =Icon.Settings
-        OnSelect: =Set(varShowSignout,!varShowSignout)
-        Width: =30
-        X: =1300
-        Y: =48
-        ZIndex: =41
+            ZIndex: =27
 
     Rectangle15_1 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
@@ -548,7 +353,7 @@ dashBoardScreen As screen:
         Width: =330
         X: =1036
         Y: =105
-        ZIndex: =42
+        ZIndex: =16
 
     Label15_1 As label:
         Align: =Align.Center
@@ -566,7 +371,7 @@ dashBoardScreen As screen:
         Width: =102
         X: =1264
         Y: =105
-        ZIndex: =43
+        ZIndex: =17
 
     Image4_1 As image:
         Height: =90
@@ -580,7 +385,7 @@ dashBoardScreen As screen:
         Width: =90
         X: =1039
         Y: =136
-        ZIndex: =44
+        ZIndex: =18
 
     Label17_1 As label:
         Font: =Font.'Segoe UI'
@@ -593,7 +398,7 @@ dashBoardScreen As screen:
         Width: =238
         X: =1128
         Y: =140
-        ZIndex: =45
+        ZIndex: =19
 
     Label18_1 As label:
         Font: =Font.'Segoe UI'
@@ -604,5 +409,208 @@ dashBoardScreen As screen:
         Width: =226
         X: =1128
         Y: =175
-        ZIndex: =46
+        ZIndex: =20
+
+    Image3_1 As image:
+        Height: =50
+        Image: |
+            =User().Image
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =56
+        RadiusBottomRight: =56
+        RadiusTopLeft: =56
+        RadiusTopRight: =56
+        Width: =50
+        X: =1008
+        Y: =37
+        ZIndex: =21
+
+    rect_Dashboard As rectangle:
+        Fill: =RGBA(0, 0, 0,0.8)
+        Height: =768
+        Visible: =varHistoryPopUp
+        Width: =1366
+        ZIndex: =22
+
+    grpManualUploadPopup_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        rect_ManualUploadBackground As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =768
+            Visible: =varManualUpload
+            Width: =1366
+            ZIndex: =10
+
+        rect_ManualUpload As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =613
+            Visible: =varManualUpload
+            Width: =838
+            X: =296
+            Y: =65
+            ZIndex: =11
+
+        fp_ManualUpload As FormProcessor:
+            BorderColor: =RGBA(210, 208, 206, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(61, 95, 174, 1)
+            FontColor: =RGBA(255, 255, 255, 1)
+            Height: =520
+            ModelId: |-
+                ="Document Processing RF1 16/7/2023, 5:52:08 pm (1da0ea84-d2c9-4b70-81ef-efe709d1ab33)"
+            Visible: =varManualUpload
+            Width: =406
+            X: =392
+            Y: =108
+            ZIndex: =12
+
+        icn_ManualUploadCancel As icon.Cancel:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =50
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varManualUpload,false)
+            Visible: =varManualUpload
+            Width: =50
+            X: =1034
+            Y: =88
+            ZIndex: =13
+
+        icn_ManualUploadNext As icon.NextArrow:
+            Color: =Color.Orange
+            Icon: =Icon.NextArrow
+            Visible: =varManualUpload
+            X: =922
+            Y: =307
+            ZIndex: =14
+
+        lbl_Proceed As label:
+            Align: =Align.Center
+            BorderColor: =Color.Orange
+            BorderThickness: =2
+            FontWeight: =FontWeight.Bold
+            Size: =16
+            Text: ="Proceed"
+            Visible: =varManualUpload
+            X: =879
+            Y: =389
+            ZIndex: =15
+
+    GroupHistory As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =37
+
+        rect_History As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =588
+            Visible: =varHistoryPopUp
+            Width: =864
+            X: =250
+            Y: =102
+            ZIndex: =28
+
+        rect_HistroryHeader As rectangle:
+            Fill: =RGBA(204, 231, 246, 1)
+            Height: =65
+            Visible: =varHistoryPopUp
+            Width: =861
+            X: =253
+            Y: =103
+            ZIndex: =29
+
+        "'lbl_Referral Number' As label":
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Referral Number"
+            Visible: =varHistoryPopUp
+            Width: =165
+            X: =664
+            Y: =114
+            ZIndex: =30
+
+        lbl_Versons As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Version "
+            Visible: =varHistoryPopUp
+            Width: =114
+            X: =262
+            Y: =114
+            ZIndex: =31
+
+        lbl_ModifiedBy As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Modified By"
+            Visible: =varHistoryPopUp
+            Width: =165
+            X: =451
+            Y: =114
+            ZIndex: =32
+
+        glry_History As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =450
+            Items: =colFinalData
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =69
+            Visible: =varHistoryPopUp
+            Width: =855
+            X: =259
+            Y: =176
+            ZIndex: =33
+
+            lbl_HistoryVal As label:
+                Height: =46
+                OnSelect: =Select(Parent)
+                Size: =14
+                Text: =ThisItem.Value
+                Width: =794
+                X: =3
+                Y: =18
+                ZIndex: =1
+
+        lbl_StatusChange As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =14
+            Text: ="Status"
+            Visible: =varHistoryPopUp
+            Width: =243
+            X: =861
+            Y: =114
+            ZIndex: =35
+
+        Button1 As button:
+            BorderThickness: =0
+            Fill: =Color.Red
+            OnSelect: =Set(varHistoryPopUp,false);
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Close"
+            Visible: =varHistoryPopUp
+            X: =582
+            Y: =631
+            ZIndex: =36
 
